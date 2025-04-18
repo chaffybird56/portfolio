@@ -6,12 +6,11 @@ import DNDLogo from "@/app/assets/dnd-logo.png";
 import Headshot from "@/app/assets/headshot.png";
 import SignaturePNG from "@/app/assets/signature.png";
 import Link from "./components/Link";
-import NextLink from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { ChevronDown, ChevronRight } from "lucide-react";
 
-export default function About() {
+export default function Home() {
   const experiences = [
     {
       title: "Signals & Automation Engineer",
@@ -74,7 +73,7 @@ export default function About() {
   const [openExp, setOpenExp] = useState(experiences.map(() => false));
 
   return (
-    <div className="flex flex-col max-w-screen-xl mx-auto px-6">
+<div className="flex flex-col max-w-screen-2xl mx-auto px-8">
       <div className="flex flex-col sm:flex-row items-center justify-between mt-4">
         <div className="relative flex-1 flex items-center">
           <Image
@@ -107,6 +106,12 @@ export default function About() {
           </span>
         </li>
       </ul>
+      <p className="mt-4 text-base">
+        If you have time,&nbsp;
+        <Link href="/about-me" className="underline">
+          read my lore
+        </Link>.
+      </p>
 
       <section id="experience" className="mt-12">
         <h2 className="text-3xl font-semibold mb-8">Experience</h2>
@@ -118,7 +123,7 @@ export default function About() {
                 copy[idx] = !copy[idx];
                 setOpenExp(copy);
               }}
-              className="flex w-full items-center justify-between"
+              className="flex w-full items-center justify-between transition-colors duration-300 ease-in-out hover:text-stone-200"
             >
               <div className="flex items-center gap-4">
                 {openExp[idx] ? <ChevronDown size={20} /> : <ChevronRight size={20} />}
@@ -130,13 +135,17 @@ export default function About() {
               </div>
               <span className="text-sm text-gray-400">{exp.dates}</span>
             </button>
-            {openExp[idx] && (
-              <ul className="mt-2 text-sm text-gray-500 list-disc list-inside">
+            <div
+              className={`grid overflow-hidden transition-[grid-template-rows] duration-500 ease-in-out ${
+                openExp[idx] ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'
+              }`}
+            >
+              <ul className="mt-2 text-sm text-gray-400 list-disc list-inside overflow-hidden">
                 {exp.details.map((line, i) => (
                   <li key={i}>{line}</li>
                 ))}
               </ul>
-            )}
+            </div>
           </div>
         ))}
       </section>
@@ -162,7 +171,7 @@ export default function About() {
         </div>
 
         {/* Projects grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           {projects
             .filter(p => filter === "All" || p.category === filter)
             .map(p => (
