@@ -7,7 +7,13 @@ module.exports = {
   ],
   darkMode: 'class',
   theme: {
-    extend: {
+    extend: {      container: {
+              center: true,
+              padding: '2rem',
+              screens: {            //  ➜ 1440 px max‑width
+                "2xl": "1440px",
+              },
+            },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

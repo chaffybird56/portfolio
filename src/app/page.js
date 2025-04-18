@@ -1,122 +1,98 @@
 "use client";
 
+import Headshot from "@/app/assets/headshot.png";
+import SignaturePNG from "@/app/assets/signature.png";
 import Link from "./components/Link";
 import NextLink from "next/link";
-import Headshot from "@/app/assets/headshot.png";
-import Signature from "@/app/components/Signature";
-import ShopifyLogo from "@/app/components/icon/Shopify.png";
-import UWaterlooLogo from "@/app/components/icon/UWaterloo.png";
-import SunnybrookLogo from "@/app/components/icon/Sunnybrook.png";
-import JAMHacksLogo from "@/app/components/icon/JAMHacks.png";
-import StAugustineLogo from "@/app/components/icon/StAugustine.png";
 import Image from "next/image";
 import { useState } from "react";
 import { GalleryHorizontalEnd } from "lucide-react";
 
 export default function About() {
   return (
-    <div className="flex flex-col max-w-2xl mx-auto">
+    <div className="flex flex-col max-w-screen-xl mx-auto px-6">
+      <div className="flex flex-col sm:flex-row items-center justify-between mt-4">
+        <div className="relative flex-1 flex items-center">
+          <Image
+            src={SignaturePNG}
+            alt="Ahmad Ali signature"
+            priority
+            className="w-full h-auto max-w-xs"
+          />
+        </div>
+        <div className="w-48 h-48 relative rounded-full border-2 border-stone-200 dark:border-stone-700 shadow-lg overflow-hidden bg-stone-50 dark:bg-stone-800">
+          <Image
+            src={Headshot}
+            alt="Ahmad Ali Headshot"
+            fill
+            className="object-cover object-center rounded-full transform scale-80"
+          />
+        </div>
+      </div>
       <ul className="grid gap-1 text-base">
         <li className="group flex items-start gap-4 pl-4 relative hover:translate-x-1 transition-transform duration-200">
           <div className="absolute left-0 top-[10px] w-[6px] h-[6px] bg-stone-800 dark:bg-stone-200 rotate-45 transform transition-all duration-300 group-hover:rotate-90 group-hover:scale-110" />
           <span className="text-stone-600 dark:text-stone-400">
-            incoming SWE Intern @ {" "}
-            <span className="inline-flex items-baseline gap-1">
-              <Image src={ShopifyLogo} alt="Shopify Logo" width={14} height={14} className="object-contain relative top-[2px]" />
-              <Link href="https://shopify.com" className="font-medium">
-                Shopify
-              </Link>
-            </span> (summer 2025)
+            ee @ <span className="font-medium">McMaster University</span>
           </span>
         </li>
         <li className="group flex items-start gap-4 pl-4 relative hover:translate-x-1 transition-transform duration-200">
           <div className="absolute left-0 top-[10px] w-[6px] h-[6px] bg-stone-800 dark:bg-stone-200 rotate-45 transform transition-all duration-300 group-hover:rotate-90 group-hover:scale-110" />
           <span className="text-stone-600 dark:text-stone-400">
-            cs @ {" "}
-            <span className="inline-flex items-baseline gap-1">
-              <Image src={UWaterlooLogo} alt="UWaterloo Logo" width={14} height={14} className="object-contain relative top-[2px]" />
-              <Link href="https://uwaterloo.ca" className="font-medium">
-                UWaterloo
-              </Link>
-            </span>
-          </span>
-        </li>
-        <li className="group flex flex-col gap-3 pl-4 relative hover:translate-x-1 transition-transform duration-200">
-          <div className="absolute left-0 top-[10px] w-[6px] h-[6px] bg-stone-800 dark:bg-stone-200 rotate-45 transform transition-all duration-300 group-hover:rotate-90 group-hover:scale-110" />
-          <span className="text-stone-600 dark:text-stone-400 italic font-medium">recently:</span>
-          <ul className="grid gap-1 pl-4">
-            <li className="relative flex items-start gap-4 group/item">
-              <span className="absolute left-[-20px] top-0 text-stone-500 dark:text-stone-500">↳</span>
-              <span className="text-stone-600 dark:text-stone-400">
-                created{" "}
-                <Link href="https://tryvibedraw.com" className="font-medium">
-                  Cursor for 3D modeling
-                </Link>{" "}
-                (3M+ views, 1,600+ stars, inbound VC interest from Sequoia, a16z, GC, others)
-              </span>
-            </li>
-            <li className="relative flex items-start gap-4 group/item">
-              <span className="absolute left-[-20px] top-0 text-stone-500 dark:text-stone-500">↳</span>
-              <span className="text-stone-600 dark:text-stone-400">
-                shipped a{" "}
-                <Link href="https://jakesresu.me" className="font-medium">
-                  product
-                </Link>{" "}
-                in &lt; 2 days to 10,000+ users
-              </span>
-            </li>
-            <li className="relative flex items-start gap-4 group/item">
-              <span className="absolute left-[-20px] top-0 text-stone-500 dark:text-stone-500">↳</span>
-              <span className="text-stone-600 dark:text-stone-400">
-                did it again with another{" "}
-                <Link href="https://justslideitin.com" className="font-medium">
-                  product
-                </Link>{" "}
-                (1,000+ users in &lt; 24 hours)
-              </span>
-            </li>
-            <li className="relative flex items-start gap-4 group/item">
-              <span className="absolute left-[-20px] top-0 text-stone-500 dark:text-stone-500">↳</span>
-              <span className="text-stone-600 dark:text-stone-400">
-                built a{" "}
-                <Link href="https://github.com/martin226/litenet" className="font-medium">
-                  deep learning framework
-                </Link>{" "}
-                from scratch in C++
-              </span>
-            </li>
-          </ul>
-        </li>
-        <li className="group flex items-start gap-4 pl-4 relative hover:translate-x-1 transition-transform duration-200">
-          <div className="absolute left-0 top-[10px] w-[6px] h-[6px] bg-stone-800 dark:bg-stone-200 rotate-45 transform transition-all duration-300 group-hover:rotate-90 group-hover:scale-110" />
-          <span className="text-stone-600 dark:text-stone-400">
-            in high school: ML research at{" "}
-            <span className="inline-flex items-baseline gap-1">
-              <Image src={SunnybrookLogo} alt="Sunnybrook Logo" width={14} height={14} className="object-contain relative top-[2px]" />
-              <Link href="https://sunnybrook.ca/research/" className="font-medium">
-                Sunnybrook
-              </Link>
-            </span>, research at{" "}
-            <span className="inline-flex items-baseline gap-1">
-              <Image src={UWaterlooLogo} alt="UWaterloo Logo" width={14} height={14} className="object-contain relative top-[2px]" />
-              <Link href="https://cs.uwaterloo.ca/~dbarrada/" className="font-medium">
-                UWaterloo
-              </Link>
-            </span>, organized{" "}
-            <span className="inline-flex items-baseline gap-1">
-              <Image src={JAMHacksLogo} alt="JAMHacks Logo" width={14} height={14} className="object-contain relative top-[2px]" />
-              <Link href="https://www.jamhacks.ca/" className="font-medium">
-                JAMHacks
-              </Link>
-            </span>, led my school&apos;s <span className="inline-flex items-baseline gap-1">
-              <Image src={StAugustineLogo} alt="St. Augustine Logo" width={14} height={14} className="object-contain relative top-[2px]" />
-              <Link href="https://app.staugustinechs.ca/" className="font-medium">
-                mobile app
-              </Link>
-            </span>
+            i like signals/control, robotics & electronics, machine learning & optics
           </span>
         </li>
       </ul>
+
+      {/* --- Experience Section --- */}
+      <section id="experience" className="mt-12 space-y-8">
+        <h2 className="text-2xl font-semibold">Experience</h2>
+
+        <article className="space-y-1">
+          <header className="flex justify-between items-baseline">
+            <h3 className="font-medium">Signals &amp; Automation Engineer</h3>
+            <span className="text-sm text-gray-400">May 2023 – Aug 2024</span>
+          </header>
+          <p className="text-sm text-gray-500">Alectra Inc. &bull; Internship</p>
+          <ul className="list-disc list-inside text-sm leading-snug text-gray-500">
+            <li>Developed image processing-driven OCR tools for single line diagrams to optimize SCADA commissioning.</li>
+            <li>Automated project tracking with Alteryx and version control.</li>
+            <li>Managed 20+ MW DER projects across Ontario, ensuring adherence to interconnection standards and grid compliance.</li>
+          </ul>
+        </article>
+
+        <article className="space-y-1">
+          <header className="flex justify-between items-baseline">
+            <h3 className="font-medium">Control Systems Analysis Engineer</h3>
+            <span className="text-sm text-gray-400">May 2022 – Aug 2022</span>
+          </header>
+          <p className="text-sm text-gray-500">Canadian Nuclear Laboratories &bull; Internship</p>
+          <ul className="list-disc list-inside text-sm leading-snug text-gray-500">
+            <li>Verified control schematics and single-line diagrams to support robust signals and controls architectures.</li>
+            <li>Contributed to data-driven feasibility studies for reactor decommissioning, emphasizing operational reliability.</li>
+            <li>Analyzed feeder/panel specifications and maintained change control logs to ensure system integrity.</li>
+          </ul>
+        </article>
+
+        <article className="space-y-1">
+          <header className="flex justify-between items-baseline">
+            <h3 className="font-medium">Digital Systems Integration Engineer</h3>
+            <span className="text-sm text-gray-400">May 2021 – Aug 2021</span>
+          </header>
+          <p className="text-sm text-gray-500">Department of National Defence &bull; Co-op</p>
+          <ul className="list-disc list-inside text-sm leading-snug text-gray-500">
+            <li>Developed custom scripts to automate facility record collection and streamline instrumentation data integration.</li>
+            <li>Integrated facility data (HVAC, boilers, air handlers) using version control and programming-enhanced digital modeling.</li>
+            <li>Updated base site plans in AutoCAD to accurately reflect building modifications impacting integrated systems.</li>
+          </ul>
+        </article>
+      </section>
+
+      {/* --- Projects Section --- */}
+      <section id="projects" className="mt-12 space-y-8">
+        <h2 className="text-2xl font-semibold">Projects</h2>
+        {/* Add your project entries here */}
+      </section>
 
       <NextLink
         href="/projects"
@@ -132,20 +108,6 @@ export default function About() {
         <Link href="/resume.pdf" className="font-medium">
           view my resume
         </Link>
-      </div>
-
-      <div className="flex flex-col sm:flex-row items-center justify-between mt-4">
-        <div className="relative flex-1 flex items-center">
-          <Signature />
-        </div>
-        <div className="w-48 h-48 relative rounded-full border-2 border-stone-200 dark:border-stone-700 shadow-lg overflow-hidden bg-stone-50 dark:bg-stone-800">
-          <Image
-            src={Headshot}
-            alt="Martin Sit Headshot"
-            fill
-            className="object-cover object-top rounded-full"
-          />
-        </div>
       </div>
     </div>
   );

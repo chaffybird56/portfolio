@@ -47,18 +47,12 @@ export default function Header({ className }) {
       isActive: pathname === "/projects",
       isNextLink: true,
     },
-    {
-      name: "writing",
-      href: "/writing",
-      isActive: pathname.startsWith("/writing"),
-      isNextLink: true,
-    },
   ];
 
   return (
     <div className="flex justify-between items-center">
       <h1 className="text-neutral-700 dark:text-neutral-300 font-semibold">
-        <Link href="/" isNextLink={true}>martin sit</Link>
+        <Link href="/" isNextLink={true}>ahmad ali</Link>
       </h1>
       <div className="flex items-center gap-6">
         <HorizontalNav links={links} />
