@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-/* No diamonds per item; only the section header line uses a diamond. */
+/* Bigger logos + names underlined at rest (animated on hover) */
 const items = [
   { name: "Alectra", logo: "/logos/alectra.png", url: "https://alectrautilities.com/" },
   { name: "Canadian Nuclear Laboratories", logo: "/logos/cnl.png", url: "https://www.cnl.ca/" },
@@ -18,8 +18,8 @@ export default function Previously() {
           <li key={it.name} className="li-row">
             <span className="li-arrow">↳</span>
             <span className="inline-logo">
-              <Image src={it.logo} alt={`${it.name} logo`} width={18} height={18} className="logo-18 object-contain" />
-              <Link href={it.url} target="_blank" className="underline font-medium">{it.name}</Link>
+              <Image src={it.logo} alt={`${it.name} logo`} width={24} height={24} className="logo-24 object-contain" />
+              <Link href={it.url} target="_blank" className="u-anim-static font-medium">{it.name}</Link>
             </span>
           </li>
         ))}
