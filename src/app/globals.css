@@ -1,76 +1,42 @@
-/* --- globals.css (replace file) --- */
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Martin-like canvas: warm dark, subtle dotted grid */
+/* Martin-like dark canvas + dotted grid */
 :root {
-  --bg: #0f0e0d;              /* page background */
-  --fg: #e7e5e4;              /* text on dark */
-  --muted: #a8a29e;           /* secondary text */
+  --bg: #0f0e0d;
+  --fg: #e7e5e4;
+  --muted: #a8a29e;
   --dot: rgba(255,255,255,0.06);
 }
+html, body { background: var(--bg); color: var(--fg); }
 
-html, body {
-  background: var(--bg);
-  color: var(--fg);
-}
-
-/* dotted grid */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background-image:
-    radial-gradient(var(--dot) 1px, transparent 1px);
-  background-size: 18px 18px;      /* density of dots */
-  opacity: 0.9;
-  z-index: -1;
+body::before{
+  content:"";
+  position:fixed; inset:0; pointer-events:none;
+  background-image: radial-gradient(var(--dot) 1px, transparent 1px);
+  background-size: 18px 18px;
+  opacity:.9; z-index:-1;
 }
 
-/* typographic rhythm closer to Martin's */
-@layer base {
-  h1 { @apply text-2xl md:text-3xl font-semibold tracking-tight; }
-  h2 { @apply text-xl md:text-2xl font-semibold; }
-  p  { @apply text-base leading-7 text-stone-300; }
-  a  { @apply underline decoration-stone-600/50 hover:decoration-stone-300; }
+/* “Narrow” feel like Martin’s */
+.container-narrow { @apply max-w-2xl mx-auto px-5 md:px-6; }
+
+@layer base{
+  h1{ @apply text-2xl md:text-3xl font-semibold tracking-tight; }
+  h2{ @apply text-xl md:text-2xl font-semibold; }
+  p { @apply text-base leading-7 text-stone-300; }
+  a { @apply underline decoration-stone-600/50 hover:decoration-stone-300; }
 }
 
-/* site container width (slightly narrower like martin) */
-.container-narrow {
-  @apply max-w-2xl mx-auto px-5 md:px-6;
-}
+/* UI atoms */
+.badge { @apply inline-flex items-center rounded-full border border-stone-700/70 px-3 py-1 text-sm text-stone-300; }
+.bullet{ @apply absolute left-0 top-[10px] w-[6px] h-[6px] rotate-45 bg-stone-200/80 transition-transform duration-200 group-hover:rotate-90 group-hover:scale-110; }
 
-/* chips / badges */
-.badge {
-  @apply inline-flex items-center rounded-full border border-stone-700/70 px-3 py-1 text-sm text-stone-300;
-}
+.card{ @apply relative overflow-hidden rounded-2xl border border-stone-700/60 bg-stone-900/30 shadow-sm hover:-translate-y-0.5 transition; }
+.card-thumb{ @apply aspect-video w-full object-cover bg-stone-800/60; }
+.card-body{ @apply p-4; }
+.card-title{ @apply text-stone-100 font-medium; }
+.card-sub{ @apply text-sm text-stone-400; }
 
-/* tiny square bullets used in "previously" */
-.bullet {
-  @apply absolute left-0 top-[10px] w-[6px] h-[6px] rotate-45 bg-stone-200/80 transition-transform duration-200 group-hover:rotate-90 group-hover:scale-110;
-}
-
-/* project cards */
-.card {
-  @apply relative overflow-hidden rounded-2xl border border-stone-700/60 bg-stone-900/30 shadow-sm hover:-translate-y-0.5 transition;
-}
-.card-thumb {
-  @apply aspect-video w-full object-cover bg-stone-800/60;
-}
-.card-body {
-  @apply p-4;
-}
-.card-title {
-  @apply text-stone-100 font-medium;
-}
-.card-sub {
-  @apply text-sm text-stone-400;
-}
-
-/* header link row (top-right) */
-.header-links a {
-  @apply text-sm text-stone-400 hover:text-stone-200 no-underline;
-}
+.header-links a{ @apply text-sm text-stone-400 hover:text-stone-200 no-underline; }
