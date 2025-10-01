@@ -2,10 +2,10 @@
     <img alt="Logo" src="docs/logo.png" width="100" />
 </div>
 <h1 align="center">
-    Personal Website - v2
+    Personal Website 
 </h1>
 <p align="center">
-Responsive website, displays my portfolio, hosted on Github Pages & Notion. Built with <a href="https://nextjs.org" target="_blank">Next.js</a> and <a href="https://tailwindcss.com" target="_blank">Tailwind CSS</a>. Check it out at 
+Responsive website, displays my portfolio Built with <a href="https://nextjs.org" target="_blank">Next.js</a> and <a href="https://tailwindcss.com" target="_blank">Tailwind CSS</a>.
 </p>
 
 ## Getting Started
