@@ -1,6 +1,7 @@
-<div align="center">
-    <img alt="Logo" src="docs/logo.png" width="100" />
-</div>
+<p align="center">
+  <img src="./public/favicon.ico" alt="AA favicon" width="64" height="64">
+</p>
+
 <h1 align="center">
     Personal Website 
 </h1>
