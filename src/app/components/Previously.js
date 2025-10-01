@@ -34,7 +34,7 @@ export default function Previously() {
             <span className="text-stone-400">
               ↳ {it.role}{" "}
               <span className="inline-flex items-center gap-1">
-                <Image src={it.logo} alt={`${it.name} logo`} width={16} height={16} className="object-contain relative top-[1px]" />
+                <Image src={it.logo} alt={`${it.name} logo`} width={25} height={28} className="object-contain relative top-[1px]" />
                 <Link href={it.url} target="_blank" className="font-medium text-stone-200 underline underline-offset-4">
                   {it.name}
                 </Link>

@@ -2,41 +2,54 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Martin-like dark canvas + dotted grid */
+/* THEME TOKENS */
 :root {
   --bg: #0f0e0d;
   --fg: #e7e5e4;
   --muted: #a8a29e;
   --dot: rgba(255,255,255,0.06);
+  --card: #111111;
+  --border: rgba(120,113,108,.6); /* stone-600-ish */
 }
+html[data-theme='light'] {
+  --bg: #f7f7f5;
+  --fg: #141413;
+  --muted: #5c5a58;
+  --dot: rgba(0,0,0,.06);
+  --card: #ffffff;
+  --border: rgba(20,20,18,.2);
+}
+
+/* CANVAS + GRID */
 html, body { background: var(--bg); color: var(--fg); }
-
 body::before{
-  content:"";
-  position:fixed; inset:0; pointer-events:none;
+  content:""; position:fixed; inset:0; pointer-events:none;
   background-image: radial-gradient(var(--dot) 1px, transparent 1px);
-  background-size: 18px 18px;
-  opacity:.9; z-index:-1;
+  background-size: 18px 18px; opacity:.9; z-index:-1;
 }
 
-/* “Narrow” feel like Martin’s */
+/* Martin-like narrow column */
 .container-narrow { @apply max-w-2xl mx-auto px-5 md:px-6; }
 
 @layer base{
   h1{ @apply text-2xl md:text-3xl font-semibold tracking-tight; }
   h2{ @apply text-xl md:text-2xl font-semibold; }
   p { @apply text-base leading-7 text-stone-300; }
+  html[data-theme='light'] p { @apply text-stone-700; }
   a { @apply underline decoration-stone-600/50 hover:decoration-stone-300; }
 }
 
-/* UI atoms */
-.badge { @apply inline-flex items-center rounded-full border border-stone-700/70 px-3 py-1 text-sm text-stone-300; }
-.bullet{ @apply absolute left-0 top-[10px] w-[6px] h-[6px] rotate-45 bg-stone-200/80 transition-transform duration-200 group-hover:rotate-90 group-hover:scale-110; }
+/* atoms */
+.badge { @apply inline-flex items-center rounded-full border px-3 py-1 text-sm; border-color: var(--border); color: var(--fg); opacity:.85; }
+.bullet{ @apply absolute left-0 top-[10px] w-[6px] h-[6px] rotate-45 transition-transform duration-200 group-hover:rotate-90 group-hover:scale-110; background: var(--fg); opacity:.8; }
 
-.card{ @apply relative overflow-hidden rounded-2xl border border-stone-700/60 bg-stone-900/30 shadow-sm hover:-translate-y-0.5 transition; }
-.card-thumb{ @apply aspect-video w-full object-cover bg-stone-800/60; }
+/* cards */
+.card{ @apply relative overflow-hidden rounded-2xl border shadow-sm hover:-translate-y-0.5 transition; background: var(--card); border-color: var(--border); }
+.card-thumb{ @apply aspect-video w-full object-cover; background: color-mix(in srgb, var(--bg) 80%, #000 20%); }
 .card-body{ @apply p-4; }
-.card-title{ @apply text-stone-100 font-medium; }
-.card-sub{ @apply text-sm text-stone-400; }
+.card-title{ @apply font-medium; }
+.card-sub{ @apply text-sm; color: color-mix(in lab, var(--fg) 55%, #777 45%); }
 
-.header-links a{ @apply text-sm text-stone-400 hover:text-stone-200 no-underline; }
+/* header */
+.header-links a{ @apply text-sm no-underline; color: color-mix(in lab, var(--fg) 60%, #777 40%); }
+.header-links a:hover{ color: var(--fg); }
