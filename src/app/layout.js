@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
         </header>
 
         <main className="container-narrow pb-16">{children}</main>
-        <footer className="container-narrow py-10 text-sm text-stone-500">2025 © Ahmad Ali</footer>
+        <footer className="container-narrow py-10 text-sm" style={{color:"var(--muted)"}}>2025 © Ahmad Ali</footer>
       </body>
     </html>
   );

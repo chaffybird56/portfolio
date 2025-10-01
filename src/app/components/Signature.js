@@ -1,45 +1,33 @@
 "use client";
 import { useEffect, useRef } from "react";
 
-export default function Signature({ width = 210, height = 70, stroke = "rgba(231,229,228,0.9)" }) {
-  const pathRef = useRef(null);
+/* Animated signature. Replace the 'd' with your real path later. */
+export default function Signature({ width=230, height=72, stroke="rgb(197,120,86)" }) {
+  const mainRef = useRef(null);
+  const lineRef = useRef(null);
 
   useEffect(() => {
-    const p = pathRef.current;
-    if (!p) return;
-    const len = p.getTotalLength();
-    p.style.strokeDasharray = String(len);
-    p.style.strokeDashoffset = String(len);
-    // trigger animation
-    requestAnimationFrame(() => {
-      p.style.transition = "stroke-dashoffset 2.2s ease";
-      p.style.strokeDashoffset = "0";
-    });
+    const run = (el, dur=2200) => {
+      if (!el) return;
+      const L = el.getTotalLength();
+      el.style.strokeDasharray = String(L);
+      el.style.strokeDashoffset = String(L);
+      el.getBoundingClientRect();
+      el.style.transition = `stroke-dashoffset ${dur}ms ease`;
+      el.style.strokeDashoffset = "0";
+    };
+    run(mainRef.current, 2200);
+    run(lineRef.current, 900);
   }, []);
 
   return (
-    <svg width={width} height={height} viewBox="0 0 210 70" fill="none" aria-label="signature">
-      {/* TODO: Replace the path below with your own SVG path for your signature.
-         Quick recipe:
-         - Trace your signature in Figma/Illustrator (Pen), export as SVG.
-         - Copy the main stroke path's 'd' here; keep stroke-linecap/linejoin round. */}
+    <svg width={width} height={height} viewBox="0 0 230 72" fill="none" aria-label="signature">
       <path
-        ref={pathRef}
-        d="M8 48 C 38 28, 62 56, 84 40 S 128 20, 150 38 S 190 30, 202 46"
-        stroke={stroke}
-        strokeWidth="3"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        fill="none"
+        ref={mainRef}
+        d="M10 52 C 28 18, 48 64, 70 44 S 114 22, 132 40 S 172 32, 186 52 208 36, 220 52"
+        stroke={stroke} strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none"
       />
-      {/* underline */}
-      <path
-        d="M20 58 L190 58"
-        stroke={stroke}
-        strokeWidth="2"
-        strokeLinecap="round"
-        fill="none"
-      />
+      <path ref={lineRef} d="M20 60 L 220 60" stroke={stroke} strokeWidth="2" strokeLinecap="round" fill="none" />
     </svg>
   );
 }

@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 
+/* Persisted theme: toggles html[data-theme] so all CSS vars flip */
 export default function ThemeToggle() {
   const [theme, setTheme] = useState("dark");
 
@@ -21,8 +22,6 @@ export default function ThemeToggle() {
   };
 
   return (
-    <button onClick={toggle} aria-label="toggle theme" className="toggle">
-      {theme === "light" ? "☀️" : "🌙"}
-    </button>
+    <button onClick={toggle} aria-label="toggle theme" className="toggle">{theme === "light" ? "☀️" : "🌙"}</button>
   );
 }

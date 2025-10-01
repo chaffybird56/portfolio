@@ -2,68 +2,84 @@
 @tailwind components;
 @tailwind utilities;
 
-/* === THEME TOKENS === */
+/* ======= THEME TOKENS (flip via html[data-theme]) ======= */
 :root{
-  --bg:#0b0b0c;            /* darker (matches Martin’s feel) */
-  --fg:#e7e5e4;
-  --muted:#a8a29e;
-  --dot:rgba(255,255,255,.06);
+  --bg: #0b0b0c;          /* dark like Martin */
+  --fg: #e7e5e4;
+  --muted: #a8a29e;
+  --dot: rgba(255,255,255,.06);
+  --card: rgba(17,17,17,.65);
+  --border: rgba(120,113,108,.45);
 }
 html[data-theme="light"]{
-  --bg:#faf7f5;
-  --fg:#1c1917;
-  --muted:#57534e;
-  --dot:rgba(0,0,0,.06);
+  --bg: #faf7f5;
+  --fg: #1c1917;
+  --muted: #57534e;
+  --dot: rgba(0,0,0,.08);
+  --card: rgba(0,0,0,.06);
+  --border: rgba(28,25,23,.2);
 }
 
-html,body{ background:var(--bg); color:var(--fg); }
-
-/* DOT GRID (now visible in both modes) */
+/* canvas + dot grid */
+html,body{ background: var(--bg); color: var(--fg); }
 body::before{
   content:"";
   position:fixed; inset:0; pointer-events:none;
-  background-image:radial-gradient(var(--dot) 1px, transparent 1px);
-  background-size:18px 18px; opacity:.9; z-index:-1;
+  background-image: radial-gradient(var(--dot) 1px, transparent 1px);
+  background-size: 18px 18px; opacity:.9; z-index:-1;
 }
 
-/* Narrow page like Martin */
+/* narrow like Martin */
 .container-narrow{ @apply max-w-2xl mx-auto px-5 md:px-6; }
 
-/* Use CSS vars so colors invert naturally */
+/* typographic rhythm like Martin’s */
+@layer base{
+  h1{ @apply text-2xl md:text-3xl font-semibold tracking-tight; }
+  h2{ @apply text-xl md:text-2xl font-semibold; }
+  p { @apply text-base leading-7; color: var(--fg); }
+  a { @apply underline underline-offset-4 decoration-stone-600/50 hover:decoration-stone-300; }
+}
+
 .text-fg{ color:var(--fg); }
 .text-muted{ color:var(--muted); }
+.bg-border{ background-color:var(--border); }
 
-/* Header title like Martin (interactive underline) */
+/* header */
 .site-name{ @apply text-lg font-semibold underline decoration-stone-600/50 hover:decoration-stone-300; }
-
-/* Header links & toggle */
-.header-links a{ @apply text-sm no-underline hover:text-stone-200; color:var(--muted); }
+.header-links a{ @apply text-sm no-underline; color:var(--muted); }
 .toggle{ @apply text-sm; color:var(--muted); }
 
-/* list bullets (fix: no @apply group here) */
-.bullet{ @apply absolute left-0 top-[10px] w-[6px] h-[6px] rotate-45 bg-stone-200/80 transition-transform duration-200; }
-.li-row{ @apply relative pl-4; }       /* the diamond offset */
-.group:hover .bullet{ transform:rotate(90deg) scale(1.1); }
+/* section headers (diamond bullets) */
+.section-line{ @apply relative pl-5; color:var(--muted); }
+.section-line::before{
+  content:""; @apply absolute left-0 top-[10px] w-[6px] h-[6px] rotate-45;
+  background-color: rgba(231,229,228,.85); /* subtle */
+}
 
-/* education line with diamond marker */
-.edu-line{ @apply relative pl-5; color:var(--muted);}
-.edu-line::before{ content:""; @apply absolute left-0 top-[10px] w-[6px] h-[6px] rotate-45 bg-stone-200/80; }
+/* inner list rows (no diamonds), L-arrow + underline links */
+.li-row{ @apply relative pl-6; }
+.li-arrow{ @apply absolute left-0 top-[1px]; color:var(--muted); }
 
-/* cards */
-.card{ @apply relative overflow-hidden rounded-2xl border border-stone-700/60 bg-stone-900/30 shadow-sm hover:-translate-y-0.5 transition; }
-.card-thumb{ @apply aspect-video w-full object-cover bg-stone-800/60; }
+/* logo sizing + spacing like Martin */
+.logo-18{ width:18px; height:18px; }
+.inline-logo{ @apply inline-flex items-center gap-2; }
+
+/* project cards styled via vars to flip correctly */
+.card{
+  border: 1px solid var(--border);
+  background: var(--card);
+  @apply relative overflow-hidden rounded-2xl shadow-sm transition hover:-translate-y-0.5;
+}
+.card-thumb{ @apply aspect-video w-full object-cover; background: rgba(0,0,0,.32);}
 .card-body{ @apply p-4; }
 .card-title{ @apply font-medium; color:var(--fg); }
-.card-sub{ font-size:.9rem; color:var(--muted); }
-.badge{ @apply inline-flex items-center rounded-full border border-stone-700/70 px-3 py-1 text-sm; color:var(--fg); }
+.card-sub{ font-size:.92rem; color:var(--muted); }
+.badge{
+  border: 1px solid var(--border);
+  color: var(--fg);
+  @apply inline-flex items-center rounded-full px-3 py-1 text-sm;
+}
 
-/* small logos like Martin (slightly bigger) */
-.logo-18{ width:18px; height:18px; }
-
-/* project cards */
-.card{ @apply relative overflow-hidden rounded-2xl border border-stone-700/60 bg-stone-900/30 shadow-sm hover:-translate-y-0.5 transition; }
-.card-thumb{ @apply aspect-video w-full object-cover bg-stone-800/60; }
-.card-body{ @apply p-4; }
-.card-title{ @apply text-stone-100 font-medium; }
-.card-sub{ @apply text-sm text-stone-400; }
-.badge { @apply inline-flex items-center rounded-full border border-stone-700/70 px-3 py-1 text-sm text-stone-300; }
+/* icon buttons on cards */
+.icon-link{ color:var(--muted); }
+.icon-link:hover{ color:var(--fg); }
