@@ -1,36 +1,31 @@
-import { Inter } from "next/font/google";
-import { GoogleAnalytics } from '@next/third-parties/google';
-import { SpeedInsights } from "@vercel/speed-insights/next";
+// --- layout.js (replace file) ---
 import "./globals.css";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import CommandPalette from "./components/CommandPalette";
-import ThemeProvider from "./components/ThemeProvider";
-
-const inter = Inter({ subsets: ["latin"] });
+import Link from "next/link";
 
 export const metadata = {
   title: "Ahmad Ali",
-  metadataBase: new URL("https://martinsit.ca"),
+  description: "EE @ McMaster | control/robotics, embedded, ML/vision, optics",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <SpeedInsights />
-        <ThemeProvider>
-          <main className="bg-stone-100 dark:bg-stone-900 min-h-screen selection:bg-yellow-200 dark:selection:bg-yellow-800 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] dark:bg-[radial-gradient(#1f2937_1px,transparent_1px)] [background-size:16px_16px]">
-            <div className="container mx-auto px-4 py-10 flex flex-col gap-8 text-neutral-500 dark:text-neutral-400 font-[380] max-w-screen-xl">
-              <Header />
-              {children}
-              <Footer />
-            </div>
-          </main>
-          <CommandPalette />
-        </ThemeProvider>
+      <body>
+        <header className="container-narrow flex items-center justify-end py-6">
+          <nav className="header-links flex items-center gap-4">
+            <Link href="mailto:ahmad.ali@email.com">email</Link>
+            <Link href="https://github.com/chaffybird56" target="_blank">github</Link>
+            <Link href="https://www.linkedin.com/in/ahmad-ali-/" target="_blank">linkedin</Link>
+            <Link href="https://github.com/chaffybird56?tab=repositories" target="_blank">repo</Link>
+          </nav>
+        </header>
+
+        <main className="container-narrow pb-16">{children}</main>
+
+        <footer className="container-narrow py-10 text-sm text-stone-500">
+          2025 © Ahmad Ali
+        </footer>
       </body>
-      <GoogleAnalytics gaId="G-ZVLSZR04HM" />
     </html>
   );
 }

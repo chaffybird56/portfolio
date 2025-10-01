@@ -1,79 +1,76 @@
+/* --- globals.css (replace file) --- */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Import Prism.js syntax highlighting styles */
-@import "./styles/prism.css";
+/* Martin-like canvas: warm dark, subtle dotted grid */
+:root {
+  --bg: #0f0e0d;              /* page background */
+  --fg: #e7e5e4;              /* text on dark */
+  --muted: #a8a29e;           /* secondary text */
+  --dot: rgba(255,255,255,0.06);
+}
 
-/* Scrollbar styles */
+html, body {
+  background: var(--bg);
+  color: var(--fg);
+}
+
+/* dotted grid */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(var(--dot) 1px, transparent 1px);
+  background-size: 18px 18px;      /* density of dots */
+  opacity: 0.9;
+  z-index: -1;
+}
+
+/* typographic rhythm closer to Martin's */
 @layer base {
-  /* For Webkit browsers (Chrome, Safari) */
-  ::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
-  }
-
-  ::-webkit-scrollbar-track {
-    background: #f5f5f4;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: #d6d3d1;
-    border-radius: 5px;
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    background: #a8a29e;
-  }
-
-  /* Dark mode */
-  .dark ::-webkit-scrollbar-track {
-    background: #292524;
-  }
-
-  .dark ::-webkit-scrollbar-thumb {
-    background: #44403c;
-  }
-
-  .dark ::-webkit-scrollbar-thumb:hover {
-    background: #57534e;
-  }
-
-  /* Firefox */
-  * {
-    scrollbar-width: thin;
-    scrollbar-color: #d6d3d1 #f5f5f4;
-  }
-
-  .dark * {
-    scrollbar-color: #44403c #292524;
-  }
+  h1 { @apply text-2xl md:text-3xl font-semibold tracking-tight; }
+  h2 { @apply text-xl md:text-2xl font-semibold; }
+  p  { @apply text-base leading-7 text-stone-300; }
+  a  { @apply underline decoration-stone-600/50 hover:decoration-stone-300; }
 }
 
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+/* site container width (slightly narrower like martin) */
+.container-narrow {
+  @apply max-w-2xl mx-auto px-5 md:px-6;
 }
 
-@keyframes slide-down {
-  from {
-    opacity: 0;
-    transform: translate(-50%, -100%);
-  }
-  to {
-    opacity: 1;
-    transform: translate(-50%, 0);
-  }
+/* chips / badges */
+.badge {
+  @apply inline-flex items-center rounded-full border border-stone-700/70 px-3 py-1 text-sm text-stone-300;
 }
 
-.animate-fade-in {
-  animation: fade-in 150ms ease;
+/* tiny square bullets used in "previously" */
+.bullet {
+  @apply absolute left-0 top-[10px] w-[6px] h-[6px] rotate-45 bg-stone-200/80 transition-transform duration-200 group-hover:rotate-90 group-hover:scale-110;
 }
 
-.animate-slide-down {
-  animation: slide-down 150ms ease;
+/* project cards */
+.card {
+  @apply relative overflow-hidden rounded-2xl border border-stone-700/60 bg-stone-900/30 shadow-sm hover:-translate-y-0.5 transition;
+}
+.card-thumb {
+  @apply aspect-video w-full object-cover bg-stone-800/60;
+}
+.card-body {
+  @apply p-4;
+}
+.card-title {
+  @apply text-stone-100 font-medium;
+}
+.card-sub {
+  @apply text-sm text-stone-400;
+}
+
+/* header link row (top-right) */
+.header-links a {
+  @apply text-sm text-stone-400 hover:text-stone-200 no-underline;
 }
