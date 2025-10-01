@@ -9,6 +9,23 @@ import Link from "./components/Link";
 import Image from "next/image";
 import { useState } from "react";
 import { ChevronDown, ChevronRight } from "lucide-react";
+import VibeDrawImage from "@/app/assets/projects/vibedraw.gif";
+import SlideItInImage from "@/app/assets/projects/slideitin.png";
+import MakeItJakesImage from "@/app/assets/projects/makeitjakes.gif";
+import TwirlImage from "@/app/assets/projects/twirl.png";
+import LayoffEvadersImage from "@/app/assets/projects/layoffevaders.png";
+import EcoRewardsImage from "@/app/assets/projects/ecorewards.png";
+import LiteNetImage from "@/app/assets/projects/litenet.gif";
+import KaleidoscopeImage from "@/app/assets/projects/kaleidoscope.png";
+import SensaiImage from "@/app/assets/projects/sensai.png";
+import UptoneImage from "@/app/assets/projects/uptone.png";
+import CredibilityImage from "@/app/assets/projects/credibility.png";
+import BYRYouthImage from "@/app/assets/projects/byryouth.png";
+import SACHSAppWebsiteImage from "@/app/assets/projects/sachs-app-website.png";
+import SACHSWebsiteImage from "@/app/assets/projects/sachs-website.png";
+import TicTacToeImage from "@/app/assets/projects/tictactoe.png";
+import EnigmaImage from "@/app/assets/projects/enigma.png";
+import COVID19TrackerImage from "@/app/assets/projects/covid19-tracker.png";
 
 export default function Home() {
   const experiences = [
@@ -39,7 +56,7 @@ export default function Home() {
     {
       title: "Digital Systems Integration Engineer",
       company: "Department of National Defence",
-      type: "Co-op",
+      type: "Internship",
       dates: "May 2021 – Aug 2021",
       logo: DNDLogo,
       details: [
@@ -63,11 +80,160 @@ export default function Home() {
     "Photonics & Optoelectronics"
   ];
 
-  // Placeholder: add your project objects here with keys: id, title, category, skills (array), github (url), thumbnail (imported image)
   const projects = [
-    // Example:
-    // { id: 1, title: "YOLO PCB QA/QC", category: "Computer Vision/Image Processing", skills: ["Python","YOLO","OpenCV"], github: "https://github.com/...", thumbnail: YourThumbnailImage },
+    {
+      id: 1,
+      title: "Vibe Draw",
+      href: "https://tryvibedraw.com",
+      thumbnail: VibeDrawImage,
+      technologies: ["Python","FastAPI","React","Next.js","Three.js","TypeScript","Google Cloud Platform"],
+      github: "https://github.com/martin226/vibe-draw",
+      demo: "https://tryvibedraw.com"
+    },
+    {
+      id: 2,
+      title: "Slide it In",
+      href: "https://justslideitin.com",
+      thumbnail: SlideItInImage,
+      technologies: ["Go","Next.js","Google Cloud Platform"],
+      github: "https://github.com/martin226/slideitin",
+      demo: "https://justslideitin.com"
+    },
+    {
+      id: 3,
+      title: "Make It Jake's",
+      href: "https://jakesresu.me",
+      thumbnail: MakeItJakesImage,
+      technologies: ["Ruby on Rails","Remix.js","Redis","Google Cloud Platform"],
+      github: "https://github.com/martin226/makeitjakes",
+      demo: "https://jakesresu.me"
+    },
+    {
+      id: 4,
+      title: "Twirl",
+      href: "https://dorahacks.io/buidl/21695",
+      thumbnail: TwirlImage,
+      technologies: ["Python","FastAPI","React","Next.js","Three.js","OpenSCAD","Azure"],
+      github: "https://github.com/martin226/twirl",
+      demo: "https://www.youtube.com/watch?v=8JtZbi48wHM"
+    },
+    {
+      id: 5,
+      title: "Layoff Evaders",
+      href: "https://devpost.com/software/layoff-evaders",
+      thumbnail: LayoffEvadersImage,
+      technologies: ["Unity","C#","Streamlit","Firebase"],
+      github: "https://github.com/martin226/layoffevaders",
+      demo: "https://www.youtube.com/watch?v=VG-6LGvBcf4"
+    },
+    {
+      id: 6,
+      title: "EcoRewards",
+      href: "https://devpost.com/software/ecorewards-t0qw26",
+      thumbnail: EcoRewardsImage,
+      technologies: ["JavaScript","React","Express.js","PostgreSQL","Tailwind CSS","GPT-4o","NFC"],
+      github: "https://github.com/jeffrey-zang/ecorewards"
+    },
+    {
+      id: 7,
+      title: "LiteNet",
+      href: "https://github.com/martin226/litenet",
+      thumbnail: LiteNetImage,
+      technologies: ["C++"],
+      github: "https://github.com/martin226/litenet"
+    },
+    {
+      id: 8,
+      title: "Kaleidoscope",
+      href: "https://partner.projectboard.world/ysc/project/emotion-and-irony-detection-for-individuals-with-autism-spectrum-disorder-using-deep-neural-networks-dwvwyv",
+      thumbnail: KaleidoscopeImage,
+      technologies: ["Python","PyTorch","HuggingFace","WebExtensions","Flask"],
+      github: "https://github.com/martin226/kaleidoscope",
+      demo: "https://partner.projectboard.world/ysc/project/emotion-and-irony-detection-for-individuals-with-autism-spectrum-disorder-using-deep-neural-networks-dwvwyv"
+    },
+    {
+      id: 9,
+      title: "Sensai",
+      href: "https://github.com/martin226/sensai",
+      thumbnail: SensaiImage,
+      technologies: ["Python","JavaScript","Vue.js","Nuxt","Flask","OpenCV","MediaPipe","SocketIO","JWT"],
+      github: "https://github.com/martin226/sensai",
+      demo: "https://devpost.com/software/sensai-nvh940"
+    },
+    {
+      id: 10,
+      title: "Uptone",
+      href: "https://github.com/martin226/uptone",
+      thumbnail: UptoneImage,
+      technologies: ["Python","JavaScript","TensorFlow","Keras","Flask","WebExtensions"],
+      github: "https://github.com/martin226/uptone",
+      demo: "https://devpost.com/software/uptone"
+    },
+    {
+      id: 11,
+      title: "Credibility",
+      href: "https://github.com/martin226/credibility",
+      thumbnail: CredibilityImage,
+      technologies: ["Python","JavaScript","React","Next.js","TailwindCSS","Flask","Selenium","GPT-4o"],
+      github: "https://github.com/martin226/credibility",
+      demo: "https://devpost.com/software/credibility"
+    },
+    {
+      id: 12,
+      title: "BYR Youth",
+      href: "https://byryouth.ca",
+      thumbnail: BYRYouthImage,
+      technologies: ["JavaScript","Vue.js","Nuxt","WindiCSS","Imgur API"],
+      demo: "https://byryouth.ca"
+    },
+    {
+      id: 13,
+      title: "St. Augustine CHS Mobile App Website",
+      href: "https://app.staugustinechs.ca",
+      thumbnail: SACHSAppWebsiteImage,
+      technologies: ["JavaScript","Vue.js","Nuxt","TailwindCSS","Firebase"],
+      github: "https://github.com/stau-app-dev/app-website",
+      demo: "https://app.staugustinechs.ca"
+    },
+    {
+      id: 14,
+      title: "St. Augustine CHS School Website",
+      href: "https://staugustinechs.ca",
+      thumbnail: SACHSWebsiteImage,
+      technologies: ["PHP","JavaScript","HTML","CSS","Bootstrap","MySQL"],
+      github: "https://github.com/stau-app-dev/main-website",
+      demo: "https://staugustinechs.ca"
+    },
+    {
+      id: 15,
+      title: "Tic-Tac-Toe AI Solver",
+      href: "https://martin226.github.io/tic-tac-toe-ai/",
+      thumbnail: TicTacToeImage,
+      technologies: ["JavaScript","HTML","CSS"],
+      github: "https://github.com/martin226/tic-tac-toe-ai/",
+      demo: "https://martin226.github.io/tic-tac-toe-ai/"
+    },
+    {
+      id: 16,
+      title: "Enigma",
+      href: "https://martin226.github.io/enigma/",
+      thumbnail: EnigmaImage,
+      technologies: ["JavaScript","Vue.js","TailwindCSS"],
+      github: "https://github.com/martin226/enigma/",
+      demo: "https://martin226.github.io/enigma/"
+    },
+    {
+      id: 17,
+      title: "COVID-19 Tracker",
+      href: "https://martin226.github.io/covid19-tracker/",
+      thumbnail: COVID19TrackerImage,
+      technologies: ["JavaScript","Vue.js","TailwindCSS"],
+      github: "https://github.com/martin226/covid19-tracker/",
+      demo: "https://martin226.github.io/covid19-tracker/"
+    }
   ];
+  
+  const [searchTerm, setSearchTerm] = useState("");
 
   const [filter, setFilter] = useState("All");
   const [openExp, setOpenExp] = useState(experiences.map(() => false));
@@ -83,7 +249,7 @@ export default function Home() {
             className="w-full h-auto max-w-xs"
           />
         </div>
-        <div className="w-48 h-48 relative rounded-full border-2 border-stone-200 dark:border-stone-700 shadow-lg overflow-hidden bg-stone-50 dark:bg-stone-800">
+        <div className="w-40 h-48 relative rounded-full border-2 border-stone-200 dark:border-stone-700 shadow-lg overflow-hidden bg-stone-50 dark:bg-stone-800">
           <Image
             src={Headshot}
             alt="Ahmad Ali Headshot"
@@ -171,7 +337,7 @@ export default function Home() {
         </div>
 
         {/* Projects grid */}
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects
             .filter(p => filter === "All" || p.category === filter)
             .map(p => (
@@ -186,7 +352,7 @@ export default function Home() {
                 <div className="p-4">
                   <h3 className="font-medium mb-2">{p.title}</h3>
                   <div className="flex flex-wrap gap-1 mb-3">
-                    {p.skills.map(skill => (
+                    {p.technologies.map(skill => (
                       <span key={skill} className="text-xs bg-stone-200 dark:bg-stone-700 px-2 py-1 rounded-full">
                         {skill}
                       </span>
@@ -218,3 +384,4 @@ export default function Home() {
     </div>
   );
 }
+
