@@ -23,7 +23,8 @@ export default function ProjectsGrid() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         {projects.map((p) => (
           <Link key={p.slug} href={p.href} target="_blank" className="card group">
-            <div className="absolute right-3 top-3 rounded-full bg-black/20 px-2 py-1 border border-stone-700/60">
+            {/* The change is on the next line: top-3 becomes bottom-3 */}
+            <div className="absolute right-3 bottom-3 rounded-full bg-black/20 px-2 py-1 border border-stone-700/60">
               <Octocat />
             </div>
             <Thumb src={p.thumb} alt={p.title} />
