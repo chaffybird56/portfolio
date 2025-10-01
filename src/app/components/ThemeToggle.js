@@ -4,11 +4,10 @@ import { useEffect, useState } from "react";
 export default function ThemeToggle() {
   const [theme, setTheme] = useState("dark");
 
-  // initialize from storage or prefers-color-scheme
   useEffect(() => {
     const saved = localStorage.getItem("theme");
-    const prefersLight = window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: light)").matches;
+    const prefersLight =
+      window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches;
     const t = saved ?? (prefersLight ? "light" : "dark");
     setTheme(t);
     document.documentElement.setAttribute("data-theme", t);
