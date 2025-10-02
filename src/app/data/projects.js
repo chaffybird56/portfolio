@@ -12,6 +12,54 @@ export const projects = [
       tags: ["Embedded", "Robotics", "Computer Vision", "ML", "PCB", "Mechanics"],
     },
     {
+        slug: "apollo-dqn",
+        title: "ApolloDQN",
+        blurb: "From-scratch DQN—spaceship learns to land (PyTorch).",
+        href: "https://github.com/chaffybird56/ApolloDQN",
+        thumb: "/projects/apollo-dqn.jpg",
+        tags: ["Reinforcement Learning", "PyTorch", "Python"],
+      },
+    {
+        slug: "foresight",
+        title: "Foresight",
+        blurb:
+        "Trends KPI’s, spots anomalies, and estimates reliability from sensor and event data. Asset health monitoring for any uptime-critical operation.",
+        href: "https://github.com/chaffybird56/Foresight",
+        thumb: "/projects/foresight.png", 
+        tags: [
+        "Python",
+        "Flask",
+        "Sensors",
+        "Anomaly Detection",
+        "Reliability",
+        "Statistics"
+        ],
+    },
+    {
+        slug: "clearpath-radar",
+        title: "ClearPath-Radar",
+        blurb: "Clutter-free radar processing pipeline for moving targets (range/Doppler/MTI).",
+        href: "https://github.com/chaffybird56/ClearPath-Radar",
+        thumb: "/projects/clearpath-radar.jpg",
+        tags: ["Signal Processing", "Radar", "DSP", "MTI"],
+      },
+      {
+        slug: "angle-based-motion-tracking",
+        title: "Angle-Based-Motion-Tracking",
+        blurb: "Motion estimation from angle-of-arrival using nonlinear methods.",
+        href: "https://github.com/chaffybird56/Angle-Based-Motion-Tracking",
+        thumb: "/projects/angle-based-motion-tracking.jpg",
+        tags: ["Tracking", "AOA", "Motion Estimation", "MATLAB"],
+      },
+      {
+        slug: "upright-pendulum",
+        title: "Upright-Pendulum",
+        blurb: "Stabilizes an inverted pendulum via state-feedback and a full-state observer.",
+        href: "https://github.com/chaffybird56/Upright-Pendulum",
+        thumb: "/projects/inverted-pendulum.jpg",
+        tags: ["Control Systems", "Observer", "Simulink", "State-Feedback"],
+      },
+    {
       slug: "mapping-localization-av",
       title: "MappingLocalization-AV",
       blurb: "2-D occupancy grid mapper for an autonomous vehicle using LiDAR scans and wheel/IMU odometry.",
@@ -27,14 +75,7 @@ export const projects = [
       thumb: "/projects/home-energy-monitor.jpg",
       tags: ["IoT", "Python", "MQTT", "Flask", "Energy"],
     },
-    {
-      slug: "upright-pendulum",
-      title: "Upright-Pendulum",
-      blurb: "Stabilizes an inverted pendulum via state-feedback and a full-state observer.",
-      href: "https://github.com/chaffybird56/Upright-Pendulum",
-      thumb: "/projects/inverted-pendulum.jpg",
-      tags: ["Control Systems", "Observer", "Simulink", "State-Feedback"],
-    },
+   
     {
       slug: "musclemate",
       title: "MuscleMate",
@@ -43,14 +84,7 @@ export const projects = [
       thumb: "/projects/musclemate.jpg",
       tags: ["Robotics", "EMG", "Signal Processing", "Python"],
     },
-    {
-      slug: "angle-based-motion-tracking",
-      title: "Angle-Based-Motion-Tracking",
-      blurb: "Motion estimation from angle-of-arrival using nonlinear methods.",
-      href: "https://github.com/chaffybird56/Angle-Based-Motion-Tracking",
-      thumb: "/projects/angle-based-motion-tracking.jpg",
-      tags: ["Tracking", "AOA", "Motion Estimation", "MATLAB"],
-    },
+    
     {
       slug: "f-domain-sensing",
       title: "F-Domain-Sensing",
@@ -59,14 +93,7 @@ export const projects = [
       thumb: "/projects/dsp-fmcw.jpg",
       tags: ["DSP", "DFT/FFT", "FMCW Radar", "TMS320", "MATLAB"],
     },
-    {
-      slug: "clearpath-radar",
-      title: "ClearPath-Radar",
-      blurb: "Clutter-free radar processing pipeline for moving targets (range/Doppler/MTI).",
-      href: "https://github.com/chaffybird56/ClearPath-Radar",
-      thumb: "/projects/clearpath-radar.jpg",
-      tags: ["Signal Processing", "Radar", "DSP", "MTI"],
-    },
+    
     {
       slug: "rotational-3d-lidar",
       title: "Rotational-3D-LiDAR",
@@ -91,14 +118,7 @@ export const projects = [
       thumb: "/projects/optimal-clusters.jpg",
       tags: ["Python", "Clustering", "Image Compression"],
     },
-    {
-      slug: "apollo-dqn",
-      title: "ApolloDQN",
-      blurb: "From-scratch DQN—spaceship learns to land (PyTorch).",
-      href: "https://github.com/chaffybird56/ApolloDQN",
-      thumb: "/projects/apollo-dqn.jpg",
-      tags: ["Reinforcement Learning", "PyTorch", "Python"],
-    },
+    
     {
       slug: "pixelweave",
       title: "PixelWeave",

@@ -23,16 +23,16 @@ export default function RootLayout({ children }) {
 
           {/* Header links: underlined at rest + animate on hover */}
           <nav className="header-links flex items-center gap-5">
-            <Link href="mailto:ahmad.ali@email.com" className="flex items-center gap-2">
+            <Link href="mailto:ahmad.chdhry@gmail.com" className="flex items-center gap-2">
               <Icon name="mail" /><span className="u-anim-static">email</span>
             </Link>
-            <Link href="https://github.com/chaffybird56" target="_blank" className="flex items-center gap-2">
+            <Link href="https://github.com/chaffybird56?tab=repositories" target="_blank" className="flex items-center gap-2">
               <Icon name="github" /><span className="u-anim-static">github</span>
             </Link>
-            <Link href="https://www.linkedin.com/in/ahmad-ali-/" target="_blank" className="flex items-center gap-2">
+            <Link href="https://www.linkedin.com/in/ahmad-choudhry-0/" target="_blank" className="flex items-center gap-2">
               <Icon name="linkedin" /><span className="u-anim-static">linkedin</span>
             </Link>
-            <Link href="https://github.com/chaffybird56?tab=repositories" target="_blank" className="flex items-center gap-2">
+            <Link href="https://github.com/chaffybird56/portfolio" target="_blank" className="flex items-center gap-2">
               <Icon name="repo" /><span className="u-anim-static">repo</span>
             </Link>
             <ThemeToggle />

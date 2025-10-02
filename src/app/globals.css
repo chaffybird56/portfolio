@@ -21,6 +21,8 @@ html[data-theme="light"]{
   --border:rgba(28,25,23,.2);
   --accent:rgb(197,120,86);
 }
+/* utility so we can explicitly mute non-linked text */
+.text-muted { color: var(--muted); }
 
 /* canvas + dots */
 html,body{ background:var(--bg); color:var(--fg); }
