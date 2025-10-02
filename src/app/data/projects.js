@@ -5,7 +5,7 @@
 export const projects = [
     {
       slug: "pcb-solder-robot",
-      title: "PCB Solder Robot",
+      title: "Autonomous PCB Soldering Robot",
       blurb: "CoreXY robot that solders THT joints end-to-end; Raspberry Pi vision + MobileNetV2 QA/QC.",
       href: "https://github.com/chaffybird56/PCBSolderRobot",
       thumb: "/projects/pcb-soldering-robot.jpg",
@@ -16,7 +16,7 @@ export const projects = [
       title: "MappingLocalization-AV",
       blurb: "2-D occupancy grid mapper for an autonomous vehicle using LiDAR scans and wheel/IMU odometry.",
       href: "https://github.com/chaffybird56/MappingLocalization-AV",
-      thumb: "/projects/mapping-localization-av.jpg",
+      thumb: "/projects/2d-grid.jpg",
       tags: ["SLAM", "LiDAR", "ROS", "Autonomous Vehicles", "Jetson"],
     },
     {
@@ -32,7 +32,7 @@ export const projects = [
       title: "Upright-Pendulum",
       blurb: "Stabilizes an inverted pendulum via state-feedback and a full-state observer.",
       href: "https://github.com/chaffybird56/Upright-Pendulum",
-      thumb: "/projects/upright-pendulum.jpg",
+      thumb: "/projects/inverted-pendulum.jpg",
       tags: ["Control Systems", "Observer", "Simulink", "State-Feedback"],
     },
     {
@@ -56,7 +56,7 @@ export const projects = [
       title: "F-Domain-Sensing",
       blurb: "DFT exploration + FMCW radar FFT on TI TMS320.",
       href: "https://github.com/chaffybird56/F-Domain-Sensing",
-      thumb: "/projects/f-domain-sensing.jpg",
+      thumb: "/projects/dsp-fmcw.jpg",
       tags: ["DSP", "DFT/FFT", "FMCW Radar", "TMS320", "MATLAB"],
     },
     {
