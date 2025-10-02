@@ -4,13 +4,22 @@ import Image from "next/image";
 import Link from "next/link";
 import Previously from "./components/Previously";
 import ProjectsGrid from "./components/ProjectsGrid";
-import { useState } from "react";
+import Signature from "./components/Signature";
+import { useState, useEffect } from "react";
 
 export default function Home() {
   const [sigKey, setSigKey] = useState(0);
+  const [showRedo, setShowRedo] = useState(false);
+
+  // Reveal the redo button after the signature finishes drawing
+  useEffect(() => {
+    setShowRedo(false);
+    const t = setTimeout(() => setShowRedo(true), 3900 + 250); // drawDurationMs + small pad
+    return () => clearTimeout(t);
+  }, [sigKey]);
 
   return (
-    <div>
+    <div className="text-fg">
       {/* Education */}
       <div className="section-line">
         <span className="inline-logo">
@@ -36,7 +45,6 @@ export default function Home() {
       <div className="mt-4">
         <div className="section-line italic">what i’ve been building:</div>
         <ul className="mt-2 grid gap-2">
-          {/* 1) Capstone (unchanged: trophy + celebrate around "1st place") */}
           <li className="li-row text-muted">
             <span className="li-arrow">↳</span>
             <Link
@@ -46,10 +54,10 @@ export default function Home() {
             >
               capstone project
             </Link>{" "}
-            that won <span className="text-fg">🏆 1st place 🎉</span> at the grand expo
+            that won <span className="text-fg">🏆 1st place 🎉</span> at the grand
+            expo
           </li>
 
-          {/* 2) Apollo — emoji right after arrow */}
           <li className="li-row text-muted">
             <span className="li-arrow">↳</span> 🚀{" "}
             taught a from-scratch{" "}
@@ -63,7 +71,6 @@ export default function Home() {
             to fly and land a spaceship in PyTorch
           </li>
 
-          {/* 3) Foresight — emoji right after arrow */}
           <li className="li-row text-muted">
             <span className="li-arrow">↳</span> 🔎{" "}
             created{" "}
@@ -74,10 +81,10 @@ export default function Home() {
             >
               Foresight
             </Link>{" "}
-            — helps teams keep machines healthy: watches key signals, spots odd behavior, and gives a heads-up on likely failures
+            — helps teams keep machines healthy: watches key signals, spots odd
+            behavior, and gives a heads-up on likely failures
           </li>
 
-          {/* 4) Energy Monitor — emoji right after arrow */}
           <li className="li-row text-muted">
             <span className="li-arrow">↳</span> ⚡{" "}
             developed an{" "}
@@ -88,7 +95,8 @@ export default function Home() {
             >
               Energy Monitor
             </Link>{" "}
-            — a clear way to see your home’s power in real time, follow daily patterns, and get nudges when something’s using more than it should
+            — a clear way to see your home’s power in real time, follow daily
+            patterns, and get nudges when something’s using more than it should
           </li>
         </ul>
       </div>
@@ -96,24 +104,43 @@ export default function Home() {
       {/* previously */}
       <Previously />
 
-      {/* Signature block is intentionally commented out for now
-      <div className="mt-8">
-        <div className="flex items-center gap-3">
+      {/* Signature (tight top spacing), right-aligned; redo appears under first "A" after draw */}
+      <div className="-mt-8 md:-mt-24">
+        <div className="relative flex justify-end pr-3">
+          {/* Signature svg (color drives from currentColor) */}
+          <div className="text-stone-10000 dark:text-stone-1000 translate-x-4 md:translate-x-6">
+            <Signature
+              key={sigKey}
+              width={290}
+              height={205}
+              strokeWidth={4.8}
+              drawDurationMs={3900}
+            />
+          </div>
+
+          {/* Redo button — position under first A; fades in after draw */}
           <button
             aria-label="replay signature"
             onClick={() => setSigKey((k) => k + 1)}
-            className="text-muted hover:text-fg"
             title="re-animate"
+            className={`absolute bottom-[20px] left-[22%] md:left-[30%] text-muted hover:text-fg transition-colors transition-opacity duration-500 ${
+              showRedo ? "opacity-100" : "opacity-0 pointer-events-none"
+            }`}
           >
             ↻
           </button>
-          <Signature key={sigKey} width={230} height={72} stroke="rgb(197,120,86)" />
         </div>
-        <div className="mt-3 sig-rule" />
-      </div>
-      */}
 
-      {/* projects */}
+        {/* full-width rule */}
+        <div className="mt-0 h-px w-full bg-stone-300/60 dark:bg-stone-600/50" />
+      </div>
+
+      {/* Single projects heading (same style as site-name) */}
+      <h2 className="site-name underline underline-offset-[6px] decoration-stone-400 dark:decoration-stone-600 mt-4 mb-3">
+        projects
+      </h2>
+
+      {/* Grid (no internal heading) */}
       <ProjectsGrid />
     </div>
   );
