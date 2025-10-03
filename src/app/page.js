@@ -106,7 +106,7 @@ export default function Home() {
 
       {/* Signature (tight top spacing), right-aligned; redo appears under first "A" after draw */}
       <div className="-mt-8 md:-mt-24">
-        <div className="relative flex justify-end pr-3">
+      <div className="-mt-8 md:-mt-24 relative pointer-events-none flex justify-end pr-3">
           {/* Signature svg (color drives from currentColor) */}
           <div className="text-stone-10000 dark:text-stone-1000 translate-x-4 md:translate-x-6">
             <Signature
@@ -120,10 +120,12 @@ export default function Home() {
 
           {/* Redo button — position under first A; fades in after draw */}
           <button
+          lassName="text-muted hover:text-fg transition-colors pointer-events-auto
+                 absolute bottom-[6px] left-[22%] md:left-[28%]"
             aria-label="replay signature"
             onClick={() => setSigKey((k) => k + 1)}
             title="re-animate"
-            className={`absolute bottom-[20px] left-[22%] md:left-[30%] text-muted hover:text-fg transition-colors transition-opacity duration-500 ${
+            className={`absolute bottom-[14px] left-[37%] sm:left-[39%] md:left-[33%] lg:left-[45%] xl:left-[46%] text-muted hover:text-fg transition-colors transition-opacity duration-500 ${
               showRedo ? "opacity-100" : "opacity-0 pointer-events-none"
             }`}
           >

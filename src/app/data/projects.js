@@ -9,7 +9,7 @@ export const projects = [
       blurb: "CoreXY robot that solders THT joints end-to-end; Raspberry Pi vision + MobileNetV2 QA/QC.",
       href: "https://github.com/chaffybird56/PCBSolderRobot",
       thumb: "/projects/pcb-soldering-robot.jpg",
-      tags: ["Embedded", "Robotics", "Computer Vision", "ML", "PCB", "Mechanics"],
+      tags: ["Embedded", "Robotics", "Computer Vision", "ML/AI", "PCB", "Mechanics/CAD"],
     },
     {
         slug: "apollo-dqn",
@@ -17,7 +17,7 @@ export const projects = [
         blurb: "From-scratch DQN—spaceship learns to land (PyTorch).",
         href: "https://github.com/chaffybird56/ApolloDQN",
         thumb: "/projects/apollo-dqn.jpg",
-        tags: ["Reinforcement Learning", "PyTorch", "Python"],
+        tags: ["Reinforcement Learning", "PyTorch", "Python", "Deep Networks", "Agent Training"],
       },
     {
         slug: "foresight",
@@ -29,10 +29,10 @@ export const projects = [
         tags: [
         "Python",
         "Flask",
-        "Sensors",
+        "Sensor Monitoring",
         "Anomaly Detection",
         "Reliability",
-        "Statistics"
+        "Statistical Forecasting"
         ],
     },
     {
@@ -52,12 +52,20 @@ export const projects = [
         tags: ["Tracking", "AOA", "Motion Estimation", "MATLAB"],
       },
       {
+        slug: "morpho-plate",
+        title: "morpho-plate",
+        blurb: "Lightweight ALPR/ANPR pipeline for roadway footage (real-time inclined).",
+        href: "https://github.com/chaffybird56/morpho-plate",
+        thumb: "/projects/morpho-plate.jpg",
+        tags: ["Computer Vision", "OCR", "Python", "Image Processing"],
+      },
+      {
         slug: "upright-pendulum",
         title: "Upright-Pendulum",
         blurb: "Stabilizes an inverted pendulum via state-feedback and a full-state observer.",
         href: "https://github.com/chaffybird56/Upright-Pendulum",
         thumb: "/projects/inverted-pendulum.jpg",
-        tags: ["Control Systems", "Observer", "Simulink", "State-Feedback"],
+        tags: ["Control Systems", "Observer", "Simulink", "State-Feedback", "Stabilization"],
       },
     {
       slug: "mapping-localization-av",
@@ -102,14 +110,7 @@ export const projects = [
       thumb: "/projects/rotational-3d-lidar.jpg",
       tags: ["Embedded", "C", "MSP432", "LiDAR", "Point Cloud"],
     },
-    {
-      slug: "morpho-plate",
-      title: "morpho-plate",
-      blurb: "Lightweight ALPR/ANPR pipeline for roadway footage (real-time inclined).",
-      href: "https://github.com/chaffybird56/morpho-plate",
-      thumb: "/projects/morpho-plate.jpg",
-      tags: ["Computer Vision", "OCR", "Python", "Image Processing"],
-    },
+    
     {
       slug: "optimal-clusters",
       title: "optimal-clusters",
