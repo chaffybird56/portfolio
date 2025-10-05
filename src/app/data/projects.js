@@ -36,6 +36,14 @@ export const projects = [
         ],
     },
     {
+        slug: "morpho-plate",
+        title: "morpho-plate",
+        blurb: "Lightweight ALPR/ANPR pipeline for roadway footage (real-time inclined).",
+        href: "https://github.com/chaffybird56/morpho-plate",
+        thumb: "/projects/morpho-plate.jpg",
+        tags: ["Computer Vision", "OCR", "Python", "Image Processing"],
+      },
+    {
         slug: "clearpath-radar",
         title: "ClearPath-Radar",
         blurb: "Clutter-free radar processing pipeline for moving targets (range/Doppler/MTI).",
@@ -51,14 +59,7 @@ export const projects = [
         thumb: "/projects/angle-based-motion-tracking.jpg",
         tags: ["Tracking", "AOA", "Motion Estimation", "MATLAB"],
       },
-      {
-        slug: "morpho-plate",
-        title: "morpho-plate",
-        blurb: "Lightweight ALPR/ANPR pipeline for roadway footage (real-time inclined).",
-        href: "https://github.com/chaffybird56/morpho-plate",
-        thumb: "/projects/morpho-plate.jpg",
-        tags: ["Computer Vision", "OCR", "Python", "Image Processing"],
-      },
+      
       {
         slug: "upright-pendulum",
         title: "Upright-Pendulum",

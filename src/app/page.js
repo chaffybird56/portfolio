@@ -72,6 +72,16 @@ export default function Home() {
           </li>
 
           <li className="li-row text-muted">
+            <span className="li-arrow">↳</span> 🚗{" "}
+            built{" "}
+            <Link href="https://github.com/chaffybird56/morpho-plate" target="_blank" className="u-anim-static font-semibold">
+              Morpho-Plate
+            </Link>{" "}
+            — detects license plates in video footage and flags watch-list hits live
+          </li>
+
+          {/*}
+          <li className="li-row text-muted">
             <span className="li-arrow">↳</span> 🔎{" "}
             created{" "}
             <Link
@@ -83,7 +93,7 @@ export default function Home() {
             </Link>{" "}
             — helps teams keep machines healthy: watches key signals, spots odd
             behavior, and gives a heads-up on likely failures
-          </li>
+          </li>*/}
 
           <li className="li-row text-muted">
             <span className="li-arrow">↳</span> ⚡{" "}
@@ -114,23 +124,27 @@ export default function Home() {
               width={290}
               height={205}
               strokeWidth={4.8}
-              drawDurationMs={3900}
+              drawDurationMs={4900}
             />
           </div>
 
           {/* Redo button — position under first A; fades in after draw */}
           <button
-          lassName="text-muted hover:text-fg transition-colors pointer-events-auto
-                 absolute bottom-[6px] left-[22%] md:left-[28%]"
-            aria-label="replay signature"
-            onClick={() => setSigKey((k) => k + 1)}
-            title="re-animate"
-            className={`absolute bottom-[14px] left-[37%] sm:left-[39%] md:left-[33%] lg:left-[45%] xl:left-[46%] text-muted hover:text-fg transition-colors transition-opacity duration-500 ${
-              showRedo ? "opacity-100" : "opacity-0 pointer-events-none"
-            }`}
-          >
-            ↻
-          </button>
+              aria-label="replay signature"
+              onClick={() => setSigKey(k => k + 1)}
+              title="re-animate"
+              className={[
+                // position (tweak these to nudge it)
+                "absolute bottom-[13px] left-[36%] md:left-[50%]",
+                // look & transitions
+                "text-muted hover:text-fg transition-colors",
+                "transition-opacity duration-500",
+                // reveal after draw
+                showRedo ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+              ].join(" ")}
+            >
+              ↻
+            </button>
         </div>
 
         {/* full-width rule */}
