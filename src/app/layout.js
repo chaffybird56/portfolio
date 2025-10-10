@@ -1,6 +1,7 @@
 import "./globals.css";
 import Link from "next/link";
 import ThemeToggle from "./components/ThemeToggle";
+import { Analytics } from "@vercel/analytics/react"
 
 function Icon({ name }) {
   const c = { width: 18, height: 18, viewBox: "0 0 24 24", fill: "currentColor", "aria-hidden": "true" };
@@ -41,6 +42,7 @@ export default function RootLayout({ children }) {
 
         <main className="container-narrow pb-16">{children}</main>
         <footer className="container-narrow py-10 text-sm" style={{color:"var(--muted)"}}>2025 © Ahmad Ali</footer>
+        <Analytics />  {/* keep this near the end of <body> */}
       </body>
     </html>
   );
