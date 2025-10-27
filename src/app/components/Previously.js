@@ -4,7 +4,7 @@ import Link from "next/link";
 
 /* Bigger logos + names underlined at rest (animated on hover) */
 const items = [
-  { name: "Alectra", logo: "/logos/alectra.png", url: "https://alectrautilities.com/" },
+  { name: "Alectra", logo: "/logos/alectra.png", url: "https://alectrautilities.com/company-overview" },
   { name: "Canadian Nuclear Laboratories", logo: "/logos/cnl.png", url: "https://www.cnl.ca/" },
   { name: "Department of National Defence", logo: "/logos/canada.png", url: "https://www.canada.ca/en/department-national-defence.html" },
 ];
