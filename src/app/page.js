@@ -59,7 +59,6 @@ export default function Home() {
 
     <li className="li-row text-muted">
       <span className="li-arrow">↳</span> 🚗{" "}
-      built{" "}
       <Link
         href="https://github.com/chaffybird56/morpho-plate"
         target="_blank"
