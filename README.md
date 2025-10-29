@@ -9,7 +9,10 @@
 Responsive website, displays my portfolio Built with <a href="https://nextjs.org" target="_blank">Next.js</a> and <a href="https://tailwindcss.com" target="_blank">Tailwind CSS</a>.
   
 </p>
+
 Click here to access my site: https://portfolio-jet-chi-34.vercel.app/
+
+
 ## Getting Started
 
 First, run the development server:
