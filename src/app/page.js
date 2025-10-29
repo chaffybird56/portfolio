@@ -41,75 +41,87 @@ export default function Home() {
         </span>
       </div>
 
-      {/* what i’ve been building */}
-      <div className="mt-4">
-        <div className="section-line italic">what i’ve been building:</div>
-        <ul className="mt-2 grid gap-2">
-          <li className="li-row text-muted">
-            <span className="li-arrow">↳</span>
-            <Link
-              href="https://github.com/chaffybird56/PCBSolderRobot"
-              target="_blank"
-              className="u-anim-static font-semibold"
-            >
-              capstone project
-            </Link>{" "}
-            that won <span className="text-fg">🏆 1st place 🎉</span> at the grand
-            expo
-          </li>
+     {/* what i’ve been building */}
+<div className="mt-4">
+  <div className="section-line italic">what i’ve been building:</div>
+  <ul className="mt-2 grid gap-2">
+    <li className="li-row text-muted">
+      <span className="li-arrow">↳</span>
+      <Link
+        href="https://github.com/chaffybird56/PCBSolderRobot"
+        target="_blank"
+        className="u-anim-static font-semibold"
+      >
+        capstone project
+      </Link>{" "}
+      that won <span className="text-fg">🏆 1st place 🎉</span> at the grand expo
+    </li>
 
-          <li className="li-row text-muted">
-            <span className="li-arrow">↳</span> 🚀{" "}
-            taught a from-scratch{" "}
-            <Link
-              href="https://github.com/chaffybird56/ApolloDQN"
-              target="_blank"
-              className="u-anim-static font-semibold"
-            >
-              DQN landing agent
-            </Link>{" "}
-            to fly and land a spaceship in PyTorch
-          </li>
+    <li className="li-row text-muted">
+      <span className="li-arrow">↳</span> 🚗{" "}
+      built{" "}
+      <Link
+        href="https://github.com/chaffybird56/morpho-plate"
+        target="_blank"
+        className="u-anim-static font-semibold"
+      >
+        Morpho-Plate
+      </Link>{" "}
+      — detects license plates in video footage and flags watch-list hits live
+    </li>
 
-          <li className="li-row text-muted">
-            <span className="li-arrow">↳</span> 🚗{" "}
-            built{" "}
-            <Link href="https://github.com/chaffybird56/morpho-plate" target="_blank" className="u-anim-static font-semibold">
-              Morpho-Plate
-            </Link>{" "}
-            — detects license plates in video footage and flags watch-list hits live
-          </li>
+    <li className="li-row text-muted">
+      <span className="li-arrow">↳</span> 🧠{" "}
+      <Link
+        href="https://github.com/chaffybird56/ApolloDQN"
+        target="_blank"
+        className="u-anim-static font-semibold"
+      >
+        Neural Autopilot: learns to land
+      </Link>{" "}
+      — a from-scratch RL agent that teaches itself precision landings (PyTorch)
+    </li>
 
-          {/*}
-          <li className="li-row text-muted">
-            <span className="li-arrow">↳</span> 🔎{" "}
-            created{" "}
-            <Link
-              href="https://github.com/chaffybird56/Foresight"
-              target="_blank"
-              className="u-anim-static font-semibold"
-            >
-              Foresight
-            </Link>{" "}
-            — helps teams keep machines healthy: watches key signals, spots odd
-            behavior, and gives a heads-up on likely failures
-          </li>*/}
+    <li className="li-row text-muted">
+    <span className="li-arrow">↳</span> ⚡{" "}
+    <Link href="https://github.com/chaffybird56/Wattboard" target="_blank" className="u-anim-static font-semibold">
+      Wattboard
+    </Link>{" "}
+    — turns home power into a live scoreboard so you spot waste early and save before the bill spikes
+  </li>
 
-          <li className="li-row text-muted">
-            <span className="li-arrow">↳</span> ⚡{" "}
-            developed an{" "}
-            <Link
-              href="https://github.com/chaffybird56/Home-EnergyMonitor"
-              target="_blank"
-              className="u-anim-static font-semibold"
-            >
-              Energy Monitor
-            </Link>{" "}
-            — a clear way to see your home’s power in real time, follow daily
-            patterns, and get nudges when something’s using more than it should
-          </li>
-        </ul>
-      </div>
+    <li className="li-row text-muted">
+      <span className="li-arrow">↳</span> 🤖{" "}
+      <Link
+        href="https://github.com/chaffybird56/MissionControl-AMR"
+        target="_blank"
+        className="u-anim-static font-semibold"
+      >
+        MissionControl-AMR
+      </Link>{" "}
+      — map, plan, and monitor a fleet in a browser-based “show-floor” demo
+    </li>
+
+    <li className="li-row text-muted">
+  <span className="li-arrow">↳</span> 📡{" "}
+  <Link href="https://github.com/chaffybird56/CAN-RTOS-Sim" target="_blank" className="u-anim-static font-semibold">
+    CAN-RTOS Sim
+  </Link>{" "}
+  — exercises timing and messaging on a crowded CAN network, proving reliability under load before hardware
+</li>
+
+
+  <li className="li-row text-muted">
+    <span className="li-arrow">↳</span> 📈{" "}
+    <Link href="https://github.com/chaffybird56/cpp-telemetry-fuser" target="_blank" className="u-anim-static font-semibold">
+      C++ Telemetry Fuser
+    </Link>{" "}
+    — unifies sensors and logs into one clean timeline, with quick health signals so issues surface fast
+  </li>
+
+
+  </ul>
+</div>
 
       {/* previously */}
       <Previously />
