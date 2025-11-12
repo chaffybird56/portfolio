@@ -12,7 +12,6 @@ Responsive website, displays my portfolio Built with <a href="https://nextjs.org
 
 Click here to access my site: https://portfolio-jet-chi-34.vercel.app/
 
-
 ## Getting Started
 
 First, run the development server:
