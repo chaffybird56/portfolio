@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" data-theme="dark">
       <body>
-        <header className="container-narrow flex items-center justify-between py-6">
+        <header className="container-wide flex items-center justify-between py-6">
           {/* Copper + underlined even at rest */}
           <Link href="/" className="site-name">ahmad ali</Link>
 
@@ -40,8 +40,8 @@ export default function RootLayout({ children }) {
           </nav>
         </header>
 
-        <main className="container-narrow pb-16">{children}</main>
-        <footer className="container-narrow py-10 text-sm" style={{color:"var(--muted)"}}>2025 © Ahmad Ali</footer>
+        <main className="container-wide pb-16">{children}</main>
+        <footer className="container-wide py-10 text-sm" style={{color:"var(--muted)"}}>2025 © Ahmad Ali</footer>
         <Analytics />  {/* keep this near the end of <body> */}
       </body>
     </html>

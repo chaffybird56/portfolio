@@ -12,6 +12,22 @@ export const projects = [
       tags: ["Embedded", "Robotics", "Computer Vision", "ML/AI", "PCB", "Mechanics/CAD"],
     },
     {
+      slug: "clink",
+      title: "Clink",
+      blurb: "Acoustic health drift detection — record a baseline, score HEALTHY/WATCH/FAULT on-device with Core ML.",
+      href: "https://github.com/chaffybird56/clink",
+      thumb: "/projects/clink.png",
+      tags: ["Core ML", "Swift", "Python", "Signal Processing", "macOS"],
+    },
+    {
+      slug: "radioforge",
+      title: "RadioForge",
+      blurb: "RF test automation for 5G/LTE — signal generator + spectrum analyzer, live dashboard, anomaly reports.",
+      href: "https://github.com/chaffybird56/RadioForge",
+      thumb: "/projects/radioforge.png",
+      tags: ["RF", "Java", "Test Automation", "Kafka", "Spark"],
+    },
+    {
         slug: "apollo-dqn",
         title: "ApolloDQN",
         blurb: "From-scratch DQN—spaceship learns to land (PyTorch).",
