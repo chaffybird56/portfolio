@@ -1,11 +1,16 @@
+import path from "path";
+import { fileURLToPath } from "url";
 import createMDX from "@next/mdx";
 import rehypePrism from "rehype-prism-plus";
 import remarkToc from "remark-toc";
 import rehypeSlug from "rehype-slug";
 
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
+  outputFileTracingRoot: path.join(__dirname),
 };
 
 const withMDX = createMDX({

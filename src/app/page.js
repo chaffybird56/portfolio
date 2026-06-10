@@ -80,7 +80,7 @@ export default function Home() {
       </div>
 
       <h2 className="site-name underline underline-offset-[6px] decoration-stone-400 dark:decoration-stone-600 mt-4 mb-3">
-        projects
+        all projects
       </h2>
 
       <ProjectsGrid />

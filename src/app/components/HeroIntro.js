@@ -8,8 +8,8 @@ export default function HeroIntro() {
         <Image
           src="/headshot.jpg"
           alt="ahmad ali"
-          width={88}
-          height={88}
+          width={100}
+          height={100}
           className="headshot-img"
           priority
         />
