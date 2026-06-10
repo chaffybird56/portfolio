@@ -3,8 +3,14 @@ import Link from "next/link";
 import Image from "next/image";
 import { projects } from "@/app/data/projects";
 
-function Thumb({ src, alt }) {
-  if (src?.endsWith(".mp4"))
+function Thumb({ src, alt, title }) {
+  if (!src)
+    return (
+      <div className="card-thumb card-thumb-fallback" aria-hidden="true">
+        <span>{title?.split(/\s+/).slice(0, 2).map((w) => w[0]).join("")}</span>
+      </div>
+    );
+  if (src.endsWith(".mp4"))
     return <video className="card-thumb" src={src} autoPlay muted loop playsInline />;
   return <Image src={src} alt={alt} width={1200} height={675} className="card-thumb" />;
 }
@@ -36,7 +42,7 @@ export default function ProjectsGrid() {
               <Octocat />
             </div>
 
-            <Thumb src={p.thumb} alt={p.title} />
+            <Thumb src={p.thumb} alt={p.title} title={p.title} />
             <div className="card-body">
               <div className="card-title">{p.title}</div>
               <div className="card-sub mt-1">{p.blurb}</div>

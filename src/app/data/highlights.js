@@ -3,7 +3,7 @@
 export const highlightCategories = [
   {
     id: "hardware",
-    label: "Hardware & Robotics",
+    label: "hardware & robotics",
     emoji: "🔧",
     items: [
       {
@@ -25,7 +25,7 @@ export const highlightCategories = [
   },
   {
     id: "control",
-    label: "Control & Energy",
+    label: "control & energy",
     emoji: "⚡",
     items: [
       {
@@ -52,7 +52,7 @@ export const highlightCategories = [
   },
   {
     id: "rf",
-    label: "Defence, RF & Test",
+    label: "defence, rf & test",
     emoji: "📡",
     items: [
       {
@@ -79,7 +79,7 @@ export const highlightCategories = [
   },
   {
     id: "ai",
-    label: "AI, ML & Vision",
+    label: "ai, ml & vision",
     emoji: "🧠",
     items: [
       {

@@ -8,7 +8,7 @@ export default function HeroIntro() {
       <div className="headshot-wrap">
         <Image
           src="/headshot.jpg"
-          alt="Ahmad Ali Choudhry"
+          alt="ahmad ali"
           width={88}
           height={88}
           className="headshot-img"
@@ -16,9 +16,8 @@ export default function HeroIntro() {
         />
       </div>
       <div className="hero-copy">
-        <h1 className="hero-name">Ahmad Ali Choudhry</h1>
         <p className="hero-tagline text-muted">
-          Electrical engineering · hardware validation · embedded &amp; RF · control &amp; test automation
+          embedded &amp; hardware validation · power · control &amp; test automation
         </p>
         <p className="hero-links text-sm text-muted">
           <Link
@@ -26,14 +25,14 @@ export default function HeroIntro() {
             target="_blank"
             className="u-anim-static"
           >
-            LinkedIn
+            linkedin
           </Link>
           <span className="hero-sep">·</span>
           <Link href="https://github.com/chaffybird56" target="_blank" className="u-anim-static">
-            GitHub
+            github
           </Link>
           <span className="hero-sep">·</span>
-          <span>Reliability Status (Level I) clearance — DND &amp; CNL</span>
+          <span>reliability status (level i) security clearance — dnd &amp; cnl</span>
         </p>
       </div>
     </div>
