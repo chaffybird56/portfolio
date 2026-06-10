@@ -12,6 +12,11 @@ function Thumb({ src, alt, title }) {
     );
   if (src.endsWith(".mp4"))
     return <video className="card-thumb" src={src} autoPlay muted loop playsInline />;
+  if (src.endsWith(".gif"))
+    return (
+      // eslint-disable-next-line @next/next/no-img-element
+      <img src={src} alt={alt} className="card-thumb" loading="lazy" />
+    );
   return <Image src={src} alt={alt} width={1200} height={675} className="card-thumb" />;
 }
 
