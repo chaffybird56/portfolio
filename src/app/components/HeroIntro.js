@@ -14,11 +14,6 @@ export default function HeroIntro() {
           priority
         />
       </div>
-      <div className="hero-copy">
-        <p className="hero-tagline text-muted">
-          embedded &amp; hardware validation · power · control &amp; test automation
-        </p>
-      </div>
     </div>
   );
 }

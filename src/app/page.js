@@ -6,6 +6,7 @@ import Previously from "./components/Previously";
 import ProjectsGrid from "./components/ProjectsGrid";
 import Signature from "./components/Signature";
 import HeroIntro from "./components/HeroIntro";
+import Currently from "./components/Currently";
 import BuildingHighlights from "./components/BuildingHighlights";
 import { useState, useEffect } from "react";
 
@@ -23,8 +24,10 @@ export default function Home() {
     <div className="text-fg">
       <HeroIntro />
 
+      <Currently />
+
       {/* Education */}
-      <div className="section-line mt-5">
+      <div className="section-line mt-6">
         <span className="inline-logo">
           <span className="text-muted">EE</span>
           <Image
@@ -43,8 +46,6 @@ export default function Home() {
           </Link>
         </span>
       </div>
-
-      <BuildingHighlights />
 
       <Previously />
 
@@ -79,7 +80,9 @@ export default function Home() {
         <div className="mt-0 h-px w-full bg-stone-300/60 dark:bg-stone-600/50" />
       </div>
 
-      <h2 className="site-name underline underline-offset-[6px] decoration-stone-400 dark:decoration-stone-600 mt-4 mb-3">
+      <BuildingHighlights />
+
+      <h2 className="site-name underline underline-offset-[6px] decoration-stone-400 dark:decoration-stone-600 mt-6 mb-3">
         all projects
       </h2>
 
