@@ -185,6 +185,14 @@ body::before{
 /* logos */
 .logo-18{ width:18px; height:18px; }
 .logo-24{ width:24px; height:24px; }
+.logo-wordmark{
+  height:22px;
+  width:auto;
+  max-width:96px;
+}
+html[data-theme="dark"] .logo-thales{
+  filter:brightness(1.45) contrast(1.05);
+}
 .inline-logo{ @apply inline-flex items-center gap-2; }
 
 /* header */

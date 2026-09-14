@@ -11,11 +11,11 @@ export default function Currently() {
           <span className="li-arrow">↳</span>
           <span className="inline-logo">
             <Image
-              src="/logos/thales.svg"
+              src="/logos/thales.png"
               alt="Thales logo"
-              width={24}
+              width={88}
               height={24}
-              className="logo-24 object-contain"
+              className="logo-wordmark logo-thales object-contain"
             />
             <Link
               href="https://www.thalesgroup.com/en/countries/europe/canada"
