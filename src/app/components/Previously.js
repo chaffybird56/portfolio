@@ -2,7 +2,6 @@
 import Image from "next/image";
 import Link from "next/link";
 
-/* Bigger logos + names underlined at rest (animated on hover) */
 const items = [
   { name: "Alectra", logo: "/logos/alectra.png", url: "https://alectrautilities.com/company-overview" },
   { name: "Canadian Nuclear Laboratories", logo: "/logos/cnl.png", url: "https://www.cnl.ca/" },
@@ -11,9 +10,9 @@ const items = [
 
 export default function Previously() {
   return (
-    <div className="mt-6">
+    <section className="timeline-block">
       <div className="section-line">previously, Engineering Internships @:</div>
-      <ul className="mt-2 grid gap-2">
+      <ul className="timeline-list">
         {items.map((it) => (
           <li key={it.name} className="li-row">
             <span className="li-arrow">↳</span>
@@ -24,6 +23,6 @@ export default function Previously() {
           </li>
         ))}
       </ul>
-    </div>
+    </section>
   );
 }

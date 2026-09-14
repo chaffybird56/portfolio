@@ -1,12 +1,11 @@
 "use client";
 
-import Image from "next/image";
-import Link from "next/link";
 import Previously from "./components/Previously";
 import ProjectsGrid from "./components/ProjectsGrid";
 import Signature from "./components/Signature";
 import HeroIntro from "./components/HeroIntro";
 import Currently from "./components/Currently";
+import Education from "./components/Education";
 import BuildingHighlights from "./components/BuildingHighlights";
 import { useState, useEffect } from "react";
 
@@ -22,36 +21,17 @@ export default function Home() {
 
   return (
     <div className="text-fg">
-      <HeroIntro />
-
-      <Currently />
-
-      {/* Education */}
-      <div className="section-line mt-6">
-        <span className="inline-logo">
-          <span className="text-muted">EE</span>
-          <Image
-            src="/logos/mcmaster.png"
-            alt="McMaster logo"
-            width={18}
-            height={18}
-            className="logo-18 object-contain"
-          />
-          <Link
-            href="https://www.mcmaster.ca/"
-            target="_blank"
-            className="u-anim-static font-semibold"
-          >
-            McMaster University
-          </Link>
-        </span>
+      <div className="intro-grid">
+        <HeroIntro />
+        <div className="intro-timeline">
+          <Currently />
+          <Education />
+          <Previously />
+        </div>
       </div>
 
-      <Previously />
-
-      {/* Signature */}
-      <div className="-mt-8 md:-mt-24">
-        <div className="-mt-8 md:-mt-24 relative pointer-events-none flex justify-end pr-3">
+      <div className="signature-block">
+        <div className="relative pointer-events-none flex justify-end pr-3">
           <div className="text-stone-10000 dark:text-stone-1000 translate-x-4 md:translate-x-6">
             <Signature
               key={sigKey}
@@ -77,12 +57,12 @@ export default function Home() {
           </button>
         </div>
 
-        <div className="mt-0 h-px w-full bg-stone-300/60 dark:bg-stone-600/50" />
+        <div className="sig-rule mt-2" />
       </div>
 
       <BuildingHighlights />
 
-      <h2 className="site-name underline underline-offset-[6px] decoration-stone-400 dark:decoration-stone-600 mt-6 mb-3">
+      <h2 className="site-name underline underline-offset-[6px] decoration-stone-400 dark:decoration-stone-600 mt-8 mb-3">
         all projects
       </h2>
 

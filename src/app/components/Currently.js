@@ -4,37 +4,37 @@ import Link from "next/link";
 
 export default function Currently() {
   return (
-    <div className="mt-5">
-      <div className="section-line">
-        currently, a Systems Engineer @{" "}
-        <span className="inline-logo">
-          <Image
-            src="/logos/thales.svg"
-            alt="Thales logo"
-            width={24}
-            height={24}
-            className="logo-24 object-contain"
-          />
-          <Link
-            href="https://www.thalesgroup.com/en/countries/europe/canada"
-            target="_blank"
-            className="u-anim-static font-semibold"
-          >
-            Thales Canada
-          </Link>
-        </span>
-      </div>
-      <ul className="mt-2 grid gap-2">
+    <section className="timeline-block">
+      <div className="section-line">currently, a Systems Engineer @:</div>
+      <ul className="timeline-list">
         <li className="li-row">
           <span className="li-arrow">↳</span>
-          <span className="text-sm leading-snug">
+          <span className="inline-logo">
+            <Image
+              src="/logos/thales.svg"
+              alt="Thales logo"
+              width={24}
+              height={24}
+              className="logo-24 object-contain"
+            />
+            <Link
+              href="https://www.thalesgroup.com/en/countries/europe/canada"
+              target="_blank"
+              className="u-anim-static font-medium"
+            >
+              Thales Canada
+            </Link>
+          </span>
+        </li>
+        <li className="li-row li-row-detail">
+          <span className="li-arrow">↳</span>
+          <span className="li-detail">
             engineering change &amp; integration on Royal Canadian Navy combat
-            systems —{" "}
-            <span className="font-medium">AJISS</span>{" "}
-            <span className="text-muted">(AOPS &amp; JSS in-service support)</span>
+            systems — <span className="li-detail-accent">AJISS</span>{" "}
+            <span className="opacity-80">(AOPS &amp; JSS in-service support)</span>
           </span>
         </li>
       </ul>
-    </div>
+    </section>
   );
 }

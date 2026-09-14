@@ -36,10 +36,24 @@ body::before{
 .container-narrow{ @apply max-w-2xl mx-auto px-5 md:px-6; }
 .container-wide{ @apply max-w-6xl mx-auto px-5 md:px-8; }
 
-/* hero */
-.hero-row{
-  @apply flex items-center gap-4 md:gap-5;
+/* hero + intro timeline */
+.intro-grid{
+  display:grid;
+  gap:1.5rem 2.25rem;
+  grid-template-columns:100px minmax(0,1fr);
+  align-items:start;
 }
+@media (max-width:639px){
+  .intro-grid{ grid-template-columns:1fr; }
+  .headshot-wrap{ margin-inline:auto; }
+}
+.intro-timeline{
+  display:flex;
+  flex-direction:column;
+  gap:1.75rem;
+  padding-top:.15rem;
+}
+.hero-row{ @apply flex items-center; }
 .headshot-wrap{
   flex-shrink:0;
   width:100px; height:100px;
@@ -58,6 +72,16 @@ body::before{
 .hero-tagline{ @apply text-sm md:text-base leading-snug; }
 .hero-links{ @apply mt-2 leading-relaxed; }
 .hero-sep{ @apply mx-2 opacity-50; }
+
+/* timeline sections */
+.timeline-block{ margin:0; }
+.timeline-list{
+  list-style:none;
+  margin-top:.65rem;
+  display:flex;
+  flex-direction:column;
+  gap:.55rem;
+}
 
 /* building highlights — 4 columns on wide screens */
 .building-grid{
@@ -123,14 +147,38 @@ body::before{
 }
 
 /* rows + arrows */
-.li-row{ @apply relative pl-6 transition-transform; }
+.li-row{ @apply relative pl-6 transition-transform leading-snug; }
 .li-row:hover{ transform:translateX(2px); }
-.li-arrow{ @apply absolute left-0 top-[1px]; color:var(--muted); }
+.li-row-detail{ margin-top:.1rem; }
+.li-arrow{
+  @apply absolute left-0;
+  top:.12rem;
+  color:var(--muted);
+  font-size:.95rem;
+  line-height:1;
+}
+.li-detail{
+  display:block;
+  font-size:.875rem;
+  line-height:1.45;
+  color:var(--muted);
+}
+.li-detail-accent{
+  color:var(--fg);
+  font-weight:600;
+}
 
 /* section headers (diamond) */
-.section-line{ @apply relative pl-5; color:var(--muted); }
+.section-line{
+  @apply relative pl-5;
+  color:var(--muted);
+  font-size:.95rem;
+  line-height:1.5;
+}
 .section-line::before{
-  content:""; @apply absolute left-0 top-[10px] w-[6px] h-[6px] rotate-45;
+  content:"";
+  @apply absolute left-0 w-[6px] h-[6px] rotate-45;
+  top:.42rem;
   background-color:rgba(231,229,228,.85);
 }
 
@@ -148,7 +196,11 @@ body::before{
 .header-links a{ @apply text-sm no-underline inline-flex items-center gap-2; color:var(--muted); }
 .toggle{ @apply text-sm; color:var(--muted); }
 
-/* signature divider */
+/* signature */
+.signature-block{
+  margin-top:1.25rem;
+  margin-bottom:.5rem;
+}
 .sig-rule{ height:1px; background-color:var(--border); width:100%; }
 
 /* project cards */

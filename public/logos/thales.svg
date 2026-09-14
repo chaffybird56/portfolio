@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 24" role="img" aria-label="Thales">
-  <rect width="120" height="24" fill="none"/>
-  <text x="0" y="18" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#005EB8" letter-spacing="0.04em">THALES</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="Thales">
+  <rect width="24" height="24" rx="5" fill="#005EB8"/>
+  <text x="12" y="16.5" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">T</text>
 </svg>

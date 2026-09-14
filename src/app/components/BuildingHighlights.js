@@ -4,7 +4,7 @@ import { highlightCategories } from "@/app/data/highlights";
 
 export default function BuildingHighlights() {
   return (
-    <div className="mt-4">
+    <div className="mt-6">
       <div className="section-line italic">what i&apos;ve built:</div>
       <div className="building-grid mt-3">
         {highlightCategories.map((cat) => (
