@@ -22,16 +22,21 @@ export default function Currently() {
               target="_blank"
               className="u-anim-static font-medium"
             >
-              Thales Canada
+              Canada
             </Link>
           </span>
         </li>
         <li className="li-row li-row-detail">
           <span className="li-arrow">↳</span>
           <span className="li-detail">
-            engineering change &amp; integration on Royal Canadian Navy combat
-            systems — <span className="li-detail-accent">AJISS</span>{" "}
-            <span className="opacity-80">(AOPS &amp; JSS in-service support)</span>
+            EC &amp; C4ISR integration on Royal Canadian Navy ships —{" "}
+            <span className="li-detail-accent">C</span>ommand,{" "}
+            <span className="li-detail-accent">C</span>ontrol,{" "}
+            <span className="li-detail-accent">C</span>ommunications,{" "}
+            <span className="li-detail-accent">C</span>omputers,{" "}
+            <span className="li-detail-accent">I</span>ntelligence,{" "}
+            <span className="li-detail-accent">S</span>urveillance &amp;{" "}
+            <span className="li-detail-accent">R</span>econnaissance
           </span>
         </li>
       </ul>

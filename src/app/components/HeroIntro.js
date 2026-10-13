@@ -1,9 +1,10 @@
 "use client";
-import Image from "next/image";
+// import Image from "next/image";
 
 export default function HeroIntro() {
   return (
     <div className="hero-row">
+      {/* Headshot — re-enable later
       <div className="headshot-wrap">
         <Image
           src="/headshot.jpg"
@@ -14,6 +15,7 @@ export default function HeroIntro() {
           priority
         />
       </div>
+      */}
     </div>
   );
 }

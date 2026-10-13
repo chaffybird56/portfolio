@@ -39,19 +39,34 @@ body::before{
 /* hero + intro timeline */
 .intro-grid{
   display:grid;
-  gap:1.5rem 2.25rem;
-  grid-template-columns:100px minmax(0,1fr);
+  gap:1rem 2.25rem;
+  grid-template-columns:minmax(240px,340px) minmax(0,1fr);
   align-items:start;
 }
-@media (max-width:639px){
+@media (max-width:767px){
   .intro-grid{ grid-template-columns:1fr; }
   .headshot-wrap{ margin-inline:auto; }
+  .signature-inline{ align-self:flex-end; }
 }
-.intro-timeline{
+.intro-left{
   display:flex;
   flex-direction:column;
-  gap:1.75rem;
-  padding-top:.15rem;
+  gap:1.35rem;
+}
+.intro-right{
+  display:flex;
+  flex-direction:column;
+  min-height:100%;
+}
+.signature-inline{
+  margin-top:.15rem;
+  margin-left:auto;
+  width:100%;
+  max-width:240px;
+}
+.intro-divider{
+  margin-top:.5rem;
+  margin-bottom:.25rem;
 }
 .hero-row{ @apply flex items-center; }
 .headshot-wrap{
@@ -205,10 +220,6 @@ html[data-theme="dark"] .logo-thales{
 .toggle{ @apply text-sm; color:var(--muted); }
 
 /* signature */
-.signature-block{
-  margin-top:1.25rem;
-  margin-bottom:.5rem;
-}
 .sig-rule{ height:1px; background-color:var(--border); width:100%; }
 
 /* project cards */
