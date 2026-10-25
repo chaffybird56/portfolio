@@ -5,38 +5,35 @@ import Link from "next/link";
 export default function Currently() {
   return (
     <section className="timeline-block">
-      <div className="section-line">currently, a Systems Engineer @:</div>
+      <div className="section-line">currently, an Electrical Engineer @:</div>
       <ul className="timeline-list">
         <li className="li-row">
           <span className="li-arrow">↳</span>
           <span className="inline-logo">
             <Image
-              src="/logos/thales.png"
-              alt="Thales logo"
-              width={88}
+              src="/logos/bruce-power.png"
+              alt="Bruce Power logo"
+              width={120}
               height={24}
-              className="logo-wordmark logo-thales object-contain"
+              className="logo-wordmark logo-bruce object-contain"
             />
             <Link
-              href="https://www.thalesgroup.com/en/countries/europe/canada"
+              href="https://www.brucepower.com/"
               target="_blank"
               className="u-anim-static font-medium"
             >
-              Canada
+              Bruce Power
             </Link>
           </span>
         </li>
         <li className="li-row li-row-detail">
           <span className="li-arrow">↳</span>
           <span className="li-detail">
-            EC &amp; C4ISR integration on Royal Canadian Navy ships —{" "}
-            <span className="li-detail-accent">C</span>ommand,{" "}
-            <span className="li-detail-accent">C</span>ontrol,{" "}
-            <span className="li-detail-accent">C</span>ommunications,{" "}
-            <span className="li-detail-accent">C</span>omputers,{" "}
-            <span className="li-detail-accent">I</span>ntelligence,{" "}
-            <span className="li-detail-accent">S</span>urveillance &amp;{" "}
-            <span className="li-detail-accent">R</span>econnaissance
+            rebuilding CANDU reactors in{" "}
+            <span className="li-detail-accent">MCR</span> — Major Component
+            Replacement of Canada Deuterium Uranium plants: swap the nuclear
+            core so Canada&apos;s largest station can keep Ontario&apos;s lights
+            on for decades
           </span>
         </li>
       </ul>
