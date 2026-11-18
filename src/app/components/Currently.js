@@ -26,11 +26,24 @@ export default function Currently() {
         <li className="li-row li-row-detail">
           <span className="li-arrow">↳</span>
           <span className="li-detail">
-            rebuilding CANDU reactors in{" "}
-            <span className="li-detail-accent">MCR</span> — Major Component
-            Replacement of Canada Deuterium Uranium plants: swap the nuclear
-            core so Canada&apos;s largest station can keep Ontario&apos;s lights
-            on for decades
+            Contributing to a once-in-a-generation project extending the life of
+            North America&apos;s largest nuclear power generating station.
+          </span>
+        </li>
+        <li className="li-row li-row-detail">
+          <span className="li-arrow">↳</span>
+          <span className="li-detail">
+            Working across Instrumentation &amp; Control (
+            <span className="li-detail-accent">I&amp;C</span>), including Reactor
+            Cooling PLC Systems and Moderator Heat Transport.
+          </span>
+        </li>
+        <li className="li-row li-row-detail">
+          <span className="li-arrow">↳</span>
+          <span className="li-detail">
+            Supporting CANDU reactor refurbishment through Bruce Power&apos;s
+            Major Component Replacement (
+            <span className="li-detail-accent">MCR</span>).
           </span>
         </li>
       </ul>

@@ -10,7 +10,7 @@ export default function Education() {
         <li className="li-row">
           <span className="li-arrow">↳</span>
           <span className="inline-logo">
-            <span className="text-muted text-sm font-medium">EE</span>
+            <span className="text-muted font-medium">EE</span>
             <Image
               src="/logos/mcmaster.png"
               alt="McMaster logo"

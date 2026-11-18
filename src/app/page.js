@@ -36,8 +36,8 @@ export default function Home() {
               <div className="text-stone-10000 dark:text-stone-1000">
                 <Signature
                   key={sigKey}
-                  width={220}
-                  height={155}
+                  width={280}
+                  height={190}
                   strokeWidth={4.2}
                   drawDurationMs={4900}
                 />

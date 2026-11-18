@@ -39,9 +39,12 @@ body::before{
 /* hero + intro timeline */
 .intro-grid{
   display:grid;
-  gap:1rem 2.25rem;
-  grid-template-columns:minmax(240px,340px) minmax(0,1fr);
+  gap:1.75rem 2.75rem;
+  grid-template-columns:minmax(280px,420px) minmax(0,1fr);
   align-items:start;
+  font-size:1.2rem;
+  line-height:1.45;
+  padding-bottom:1.25rem;
 }
 @media (max-width:767px){
   .intro-grid{ grid-template-columns:1fr; }
@@ -51,7 +54,7 @@ body::before{
 .intro-left{
   display:flex;
   flex-direction:column;
-  gap:1.35rem;
+  gap:2rem;
 }
 .intro-right{
   display:flex;
@@ -59,14 +62,33 @@ body::before{
   min-height:100%;
 }
 .signature-inline{
-  margin-top:.15rem;
+  margin-top:.75rem;
   margin-left:auto;
   width:100%;
-  max-width:240px;
+  max-width:300px;
 }
 .intro-divider{
-  margin-top:.5rem;
-  margin-bottom:.25rem;
+  margin-top:1.5rem;
+  margin-bottom:.5rem;
+}
+.intro-grid .section-line{
+  font-size:1.2rem;
+}
+.intro-grid .timeline-list{
+  margin-top:.9rem;
+  gap:.85rem;
+}
+.intro-grid .li-detail{
+  font-size:1.08rem;
+  line-height:1.5;
+}
+.intro-grid .logo-24{
+  width:30px;
+  height:30px;
+}
+.intro-grid .logo-wordmark{
+  height:30px;
+  max-width:150px;
 }
 .hero-row{ @apply flex items-center; }
 .headshot-wrap{
